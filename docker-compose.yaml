@@ -1,10 +1,10 @@
 version: '3.8'
 
 services:
-  stg-com:
+  harrys:
     build: "./"
     restart: always
-    container_name: stg-com
+    container_name: harrys
     labels:
       logging: "promtail"
       logging_jobname: "containerlogs"
