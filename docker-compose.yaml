@@ -9,4 +9,4 @@ services:
       logging: "promtail"
       logging_jobname: "containerlogs"
     ports:
-      - "2000:3000"
+      - "6500:3000"
