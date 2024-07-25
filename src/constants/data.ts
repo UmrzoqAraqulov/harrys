@@ -57,7 +57,7 @@ export const hotDogData: IData[] = [
     title: "HOT-DOG КЛАССИК ",
     image: classicHotDog_img,
   }, {
-    price: 17000,
+    price: 18000,
     type: "Стандарт",
     title: "HOT-DOG МЯСНОЙ",
     image: meatHotDog_img,
@@ -120,7 +120,7 @@ export const sideDishesData: IData[] = [
     title: "Куриные наггетсы",
     image: chickenNugget_img,
   }, {
-    price: 12000,
+    price: 15000,
     type: "Стандарт",
     title: "Картофель фри",
     image: fries_img,
@@ -141,7 +141,7 @@ export const drinksData: IData[] = [
 
 export const drinksList: Omit<IData, "image">[] = [
   {
-    price: 12000,
+    price: 15000,
     title: "Эспрессо",
   }, {
     price: 15000,
