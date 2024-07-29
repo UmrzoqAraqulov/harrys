@@ -1,10 +1,10 @@
 import {logo_img} from "@/constants";
-import {HomePage} from "@/views";
+import {CategoryPage} from "@/views";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-  title: "Get in touch - The Harry's coffee & snacks",
-  description: "Discover our social links, we announce new menus & products in our media, be the first order! You can find variety of categories available at The Harry's COFFEE & SNACKS, including burgers, side dishes, drinks, and hotdogs.",
+  title: "Menu Categories",
+  description: "Discover the variety of categories available at The Harry's COFFEE & SNACKS, including burgers, side dishes, drinks, and hotdogs.",
   keywords: "Harry's Coffee, Snacks, Burgers, Side Dishes, Drinks, Hotdogs, Menu Categories",
   openGraph: {
     siteName: "The Harry's COFFEE & SNACKS",
@@ -43,6 +43,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
-  return <HomePage/>
+export default function Category() {
+  return <CategoryPage/>
 }

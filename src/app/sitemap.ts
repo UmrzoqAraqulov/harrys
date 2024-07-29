@@ -31,10 +31,21 @@ export default function sitemap(): Sitemap {
       },
     },
     {
-      url: "https://the-harrys.uz/burgers",
+      url: "https://the-harrys.uz/category",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: {
+        languages: {
+          en: "https://the-harrys.uz/category",
+        },
+      },
+    },
+    {
+      url: "https://the-harrys.uz/burgers",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
       alternates: {
         languages: {
           en: "https://the-harrys.uz/burgers",
@@ -45,7 +56,7 @@ export default function sitemap(): Sitemap {
       url: "https://the-harrys.uz/hot-dogs",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.5,
+      priority: 0.7,
       alternates: {
         languages: {
           en: "https://the-harrys.uz/hot-dogs",
@@ -56,7 +67,7 @@ export default function sitemap(): Sitemap {
       url: "https://the-harrys.uz/drinks",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.4,
+      priority: 0.6,
       alternates: {
         languages: {
           en: "https://the-harrys.uz/drinks",
@@ -67,7 +78,7 @@ export default function sitemap(): Sitemap {
       url: "https://the-harrys.uz/side-dishes",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.3,
+      priority: 0.5,
       alternates: {
         languages: {
           en: "https://the-harrys.uz/side-dishes",

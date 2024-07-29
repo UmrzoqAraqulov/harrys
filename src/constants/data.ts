@@ -8,6 +8,7 @@ import {
   classicHotDog_img,
   drinks_icon,
   fries_img,
+  home_icon,
   hotDog_icon,
   iceTea_img,
   meatBurner_img,
@@ -15,7 +16,7 @@ import {
   moxito_img,
   sideDishes_icon
 } from "@/constants/index";
-import {IData, INavLink, TPath} from "@/types";
+import {IData, INavLink, ISocial, TPath} from "@/types";
 
 export const pathNames: TPath = {
   '/welcome': "WELCOME",
@@ -23,10 +24,15 @@ export const pathNames: TPath = {
   "/burgers": "BURGERS",
   "/hot-dogs": "HOT-DOGS",
   "/side-dishes": "SIDE-DISHES",
+  "/category": "CATEGORY",
 }
 
 export const navLinks: INavLink[] = [
   {
+    image: home_icon,
+    title: "Home",
+    href: '/'
+  }, {
     image: sideDishes_icon,
     title: "SIDE-DISHES",
     href: '/side-dishes'
@@ -82,22 +88,30 @@ export const hotDogData: IData[] = [
 export const burgersData: IData[] = [
   {
     price: 23000,
+    secondPrice: 26000,
     type: "Стандарт",
+    secondTitle: "Стандарт Cheese",
     image: chickenBurger_img,
     title: "ЧИКЕН BURGER",
   }, {
     price: 25000,
+    secondPrice: 28000,
     type: "Стандарт",
+    secondTitle: "Стандарт Cheese",
     image: meatBurner_img,
     title: "МЯСНОЙ BURGER",
   }, {
-    price: 29000,
+    price: 33000,
+    secondPrice: 35000,
     type: "Дабл",
+    secondTitle: "Дабл Cheese",
     image: chickenBurger_img,
     title: "ЧИКЕН BURGER",
   }, {
-    price: 30000,
+    price: 35000,
+    secondPrice: 38000,
     type: "Дабл",
+    secondTitle: "Дабл Cheese",
     image: meatBurner_img,
     title: "МЯСНОЙ BURGER",
   }
@@ -178,6 +192,23 @@ export const drinksList: Omit<IData, "image">[] = [
   }, {
     price: 27000,
     title: "Раф кофе XL",
+  }
+]
+
+export const socialData: ISocial[] = [
+  {
+    isPhone: true,
+    href: "+998770097771",
+    text: "Связаться с нами",
+  }, {
+    href: "https://maps.app.goo.gl/KUFGkGNTuvt2vqLM7",
+    text: "Наши адреса",
+  }, {
+    href: "https://www.instagram.com/theharrys.uzb",
+    text: "Наш инстаграм",
+  }, {
+    href: "/category",
+    text: "Наше меню",
   }
 ]
 

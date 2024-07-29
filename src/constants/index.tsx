@@ -1,7 +1,12 @@
 import burger_icon from '@/assets/icons/burger.svg';
+import call_icon from '@/assets/icons/call.svg';
 import drinks_icon from '@/assets/icons/drinks.svg';
 import goBack_icon from '@/assets/icons/go-back.svg';
+import home_icon from '@/assets/icons/home.svg';
 import hotDog_icon from '@/assets/icons/hot-dog.svg';
+import instagram_icon from '@/assets/icons/instagram.svg';
+import location_icon from '@/assets/icons/location.svg';
+import menu_icon from '@/assets/icons/menu.svg';
 import navBg_icon from '@/assets/icons/nav-bg.svg';
 import sideDishes_icon from '@/assets/icons/side-dishes.svg';
 import bg_img from '@/assets/images/bg.jpg';
@@ -27,7 +32,10 @@ export {
   bg_img,
   set_img,
   logo_img,
+  home_icon,
   fries_img,
+  menu_icon,
+  call_icon,
   moxito_img,
   iceTea_img,
   navBg_icon,
@@ -38,7 +46,9 @@ export {
   mixLogo_img,
   mixture_img,
   goBack_icon,
+  location_icon,
   whiteLogo_img,
+  instagram_icon,
   meatHotDog_img,
   meatBurner_img,
   sideDishes_icon,
@@ -56,6 +66,7 @@ export {
   drinksData,
   drinksList,
   hotDogData,
+  socialData,
   burgersData,
   sideDishesData,
 } from './data';

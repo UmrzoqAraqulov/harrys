@@ -30,7 +30,18 @@ export const BurgersPage: FC = () => {
                     {item.price.toLocaleString("en")}
                   </div>
                 </div>
-                <p className="text-sm sm:text-2xl lg:text-3xl font-bold line-clamp-1 break-all">{item.title}</p>
+                <div
+                  className="flex text-sm flex-col sm:flex-row sm:text-xl lg:text-2xl items-center sm:gap-2 lg:gap-3">
+                  <div className="flex items-center sm:flex-col gap-1.5 sm:gap-0">
+                    <p className="leading-6">{item.type}</p>
+                    <p className="leading-6 text-center">Cheese</p>
+                  </div>
+                  <div
+                    className="bg-primary text-lg sm:text-2xl lg:text-3xl font-semibold rounded-lg px-2 sm:py-1 sm:px-2.5">
+                    {item?.secondPrice?.toLocaleString("en")}
+                  </div>
+                </div>
+                <p className="text-sm sm:text-2xl mt-2 lg:text-3xl font-bold line-clamp-1 break-all">{item.title}</p>
               </CardBody>
             </Card>
           </MotionEl>
