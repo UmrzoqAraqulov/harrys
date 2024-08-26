@@ -53,32 +53,32 @@ export const navLinks: INavLink[] = [
 
 export const hotDogData: IData[] = [
   {
-    price: 15000,
+    price: 17000,
     type: "Стандарт",
     title: "HOT-DOG С ИКРОЙ",
     image: cheeseHotDog_img,
   }, {
-    price: 15000,
+    price: 17000,
     type: "Стандарт",
     title: "HOT-DOG КЛАССИК ",
     image: classicHotDog_img,
   }, {
-    price: 18000,
+    price: 20000,
     type: "Стандарт",
     title: "HOT-DOG МЯСНОЙ",
     image: meatHotDog_img,
   }, {
-    price: 20000,
+    price: 22000,
     type: "Дабл",
     title: "HOT-DOG С ИКРОЙ",
     image: cheeseHotDog_img,
   }, {
-    price: 20000,
+    price: 22000,
     type: "Дабл",
     title: "HOT-DOG КЛАССИК ",
     image: classicHotDog_img,
   }, {
-    price: 25000,
+    price: 28000,
     type: "Дабл",
     title: "HOT-DOG МЯСНОЙ",
     image: meatHotDog_img,
