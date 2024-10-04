@@ -53,32 +53,32 @@ export const navLinks: INavLink[] = [
 
 export const hotDogData: IData[] = [
   {
-    price: 17000,
+    price: 20000,
     type: "Стандарт",
     title: "HOT-DOG С ИКРОЙ",
     image: cheeseHotDog_img,
   }, {
-    price: 17000,
+    price: 20000,
     type: "Стандарт",
     title: "HOT-DOG КЛАССИК ",
     image: classicHotDog_img,
   }, {
-    price: 20000,
+    price: 25000,
     type: "Стандарт",
     title: "HOT-DOG МЯСНОЙ",
     image: meatHotDog_img,
   }, {
-    price: 22000,
+    price: 27000,
     type: "Дабл",
     title: "HOT-DOG С ИКРОЙ",
     image: cheeseHotDog_img,
   }, {
-    price: 22000,
+    price: 27000,
     type: "Дабл",
     title: "HOT-DOG КЛАССИК ",
     image: classicHotDog_img,
   }, {
-    price: 28000,
+    price: 35000,
     type: "Дабл",
     title: "HOT-DOG МЯСНОЙ",
     image: meatHotDog_img,
@@ -87,29 +87,29 @@ export const hotDogData: IData[] = [
 
 export const burgersData: IData[] = [
   {
-    price: 23000,
-    secondPrice: 26000,
+    price: 27000,
+    secondPrice: 32000,
     type: "Стандарт",
     secondTitle: "Стандарт Cheese",
     image: chickenBurger_img,
     title: "ЧИКЕН BURGER",
   }, {
-    price: 25000,
-    secondPrice: 28000,
+    price: 32000,
+    secondPrice: 37000,
     type: "Стандарт",
     secondTitle: "Стандарт Cheese",
     image: meatBurner_img,
     title: "МЯСНОЙ BURGER",
   }, {
-    price: 33000,
-    secondPrice: 35000,
+    price: 37000,
+    secondPrice: 40000,
     type: "Дабл",
     secondTitle: "Дабл Cheese",
     image: chickenBurger_img,
     title: "ЧИКЕН BURGER",
   }, {
-    price: 35000,
-    secondPrice: 38000,
+    price: 40000,
+    secondPrice: 45000,
     type: "Дабл",
     secondTitle: "Дабл Cheese",
     image: meatBurner_img,
@@ -119,17 +119,17 @@ export const burgersData: IData[] = [
 
 export const sideDishesData: IData[] = [
   {
-    price: 15000,
+    price: 28000,
     type: "Classic",
     title: "CORN-DOG",
     image: classicCornDog_img,
   }, {
-    price: 17000,
+    price: 31000,
     type: "Cheese",
     title: "CORN-DOG",
     image: cheeseCornDog_img,
   }, {
-    price: 17000,
+    price: 28000,
     type: "Стандарт",
     title: "Куриные наггетсы",
     image: chickenNugget_img,
@@ -143,11 +143,11 @@ export const sideDishesData: IData[] = [
 
 export const drinksData: IData[] = [
   {
-    price: 15000,
+    price: 20000,
     title: "Мохито",
     image: moxito_img,
   }, {
-    price: 15000,
+    price: 20000,
     title: "Айс-ти",
     image: iceTea_img,
   }
