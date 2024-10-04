@@ -14,7 +14,9 @@ import {
   meatBurner_img,
   meatHotDog_img,
   moxito_img,
-  sideDishes_icon
+  sideDishes_icon,
+  double_chicken_burger,
+  double_meat_burger
 } from "@/constants/index";
 import {IData, INavLink, ISocial, TPath} from "@/types";
 
@@ -105,14 +107,14 @@ export const burgersData: IData[] = [
     secondPrice: 40000,
     type: "Дабл",
     secondTitle: "Дабл Cheese",
-    image: chickenBurger_img,
+    image: double_chicken_burger,
     title: "ЧИКЕН BURGER",
   }, {
     price: 40000,
     secondPrice: 45000,
     type: "Дабл",
     secondTitle: "Дабл Cheese",
-    image: meatBurner_img,
+    image: double_meat_burger,
     title: "МЯСНОЙ BURGER",
   }
 ]

@@ -27,6 +27,9 @@ import moxito_img from '@/assets/images/moxito.png';
 import redLogo_img from '@/assets/images/red-logo.png';
 import set_img from '@/assets/images/set.png';
 import whiteLogo_img from '@/assets/images/white-logo.png';
+import double_chicken_burger from '@/assets/images/double-chicken-burger.png';
+import double_meat_burger from '@/assets/images/double-meat-burger.png';
+
 
 export {
   bg_img,
@@ -58,6 +61,8 @@ export {
   chickenNugget_img,
   classicHotDog_img,
   classicCornDog_img,
+  double_chicken_burger,
+  double_meat_burger,
 }
 
 export {
