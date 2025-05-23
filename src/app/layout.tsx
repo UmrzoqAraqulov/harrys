@@ -78,20 +78,14 @@ export default function RootLayout({ children }: Readonly<IChildren>) {
   return (
     <html lang="ru" className="dark">
       <body
-        style={{ backgroundImage: `url(${bg_img.src})` }}
-        className={`${inter.className} relative bg-cover bg-no-repeat bg-center text-white`}
+        style={{ background: "#e5e5e5" }}
+        className={`${inter.className} relative text-white`}
       >
         <Providers>
           <BaseLayout>
             {children}
           </BaseLayout>
         </Providers>
-        <div
-          className="bg-primary flex items-center justify-center absolute bottom-0 left-0 h-10 sm:h-14 md:h-16 lg:h-20 w-1/5"
-          style={{
-            borderRadius: "0% 100% 0% 100% / 100% 100% 0% 0% "
-          }}
-        />
       </body>
     </html>
   );

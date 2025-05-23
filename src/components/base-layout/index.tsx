@@ -1,12 +1,12 @@
-import {IChildren} from "@/types";
-import {FC} from "react";
-import {Header} from "../";
+import { IChildren } from "@/types";
+import { FC } from "react";
+import { Header } from "../";
 
-export const BaseLayout: FC<Readonly<IChildren>> = ({children}) => {
+export const BaseLayout: FC<Readonly<IChildren>> = ({ children }) => {
   return (
     <>
-      <Header/>
-      <main className="overflow-x-hidden">
+      <Header />
+      <main className="overflow-x-hidden overflow-y-auto">
         {children}
       </main>
     </>

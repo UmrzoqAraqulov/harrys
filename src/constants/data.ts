@@ -16,39 +16,53 @@ import {
   moxito_img,
   sideDishes_icon,
   double_chicken_burger,
-  double_meat_burger
+  double_meat_burger,
+  location_icon
 } from "@/constants/index";
-import {IData, INavLink, ISocial, TPath} from "@/types";
+import { IData, INavLink, ISocial, TPath } from "@/types";
+
+export const homeLinks: INavLink[] = [
+  {
+    image: location_icon,
+    title: "Наши адреса",
+    href: '/locations'
+  },
+  {
+    image: location_icon,
+    title: "O нас",
+    href: '/about-us'
+  },
+]
 
 export const pathNames: TPath = {
-  '/welcome': "WELCOME",
-  "/drinks": "DRINKS",
-  "/burgers": "BURGERS",
-  "/hot-dogs": "HOT-DOGS",
-  "/side-dishes": "SIDE-DISHES",
-  "/category": "CATEGORY",
+  '/welcome': "ДОБРО ПОЖАЛОВАТЬ",
+  "/drinks": "НАПИТКИ",
+  "/burgers": "БУРГЕРЫ",
+  "/hot-dogs": "ХОТ-ДОГИ",
+  "/side-dishes": "ГАРНИРЫ",
+  "/category": "КАТЕГОРИЯ",
 }
 
 export const navLinks: INavLink[] = [
   {
     image: home_icon,
-    title: "Home",
+    title: "Главный",
     href: '/'
   }, {
     image: sideDishes_icon,
-    title: "SIDE-DISHES",
+    title: "Гарниры",
     href: '/side-dishes'
   }, {
     image: drinks_icon,
-    title: "DRINKS",
+    title: "Напитки",
     href: "/drinks"
   }, {
     image: hotDog_icon,
-    title: "HOT-DOGS",
+    title: "Хот-доги",
     href: "/hot-dogs"
   }, {
     image: burger_icon,
-    title: "BURGERS",
+    title: "Бургеры",
     href: "/burgers"
   },
 ]

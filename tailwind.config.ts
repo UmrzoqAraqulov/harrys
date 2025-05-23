@@ -1,5 +1,5 @@
-import {nextui} from "@nextui-org/react";
-import type {Config} from "tailwindcss";
+import { nextui } from "@nextui-org/react";
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -22,7 +22,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: "#971010"
+        primary: "#ff0000"
       }
     },
   },
@@ -33,7 +33,7 @@ const config: Config = {
     themes: {
       light: {
         colors: {
-          primary: "#971010",
+          primary: "#ff0000",
         }
       }
     }

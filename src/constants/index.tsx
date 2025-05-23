@@ -26,9 +26,10 @@ import mixture_img from '@/assets/images/mixture.jpg';
 import moxito_img from '@/assets/images/moxito.png';
 import redLogo_img from '@/assets/images/red-logo.png';
 import set_img from '@/assets/images/set.png';
-import whiteLogo_img from '@/assets/images/white-logo.png';
+import desk_logo_img from '@/assets/images/logo-desktop.png';
 import double_chicken_burger from '@/assets/images/double-chicken-burger.png';
 import double_meat_burger from '@/assets/images/double-meat-burger.png';
+import hero_bg_img from '@/assets/images/hero-bg.png'
 
 
 export {
@@ -50,7 +51,7 @@ export {
   mixture_img,
   goBack_icon,
   location_icon,
-  whiteLogo_img,
+  desk_logo_img,
   instagram_icon,
   meatHotDog_img,
   meatBurner_img,
@@ -63,6 +64,8 @@ export {
   classicCornDog_img,
   double_chicken_burger,
   double_meat_burger,
+
+  hero_bg_img
 }
 
 export {
