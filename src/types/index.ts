@@ -1,5 +1,5 @@
-import {StaticImageData} from "next/image";
-import {ReactNode} from "react";
+import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
 
 export interface IChildren {
   children: ReactNode;
@@ -16,14 +16,21 @@ export interface IData {
   image: StaticImageData;
 }
 
-export interface INavLink {
-  image: StaticImageData;
-  title: string;
-  href: string;
+export type TLocale = "uz" | "ru";
+
+export interface IParams {
+  params: { locale: TLocale };
 }
 
-export interface ISocial {
-  text: string;
-  href: string;
-  isPhone?: boolean;
+export interface IPageParams {
+  locale?: TLocale
+}
+
+export interface ILocalesData {
+  label: string,
+  value: TLocale;
+}
+export interface INewsImages {
+  img: string;
+  key: string;
 }

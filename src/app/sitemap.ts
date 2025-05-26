@@ -2,17 +2,18 @@ type Sitemap = Array<{
   url: string;
   lastModified?: string | Date;
   changeFrequency?:
-    | "always"
-    | "hourly"
-    | "daily"
-    | "weekly"
-    | "monthly"
-    | "yearly"
-    | "never";
+  | "always"
+  | "hourly"
+  | "daily"
+  | "weekly"
+  | "monthly"
+  | "yearly"
+  | "never";
   priority?: number;
   alternates?: {
     languages?: {
-      en: string;
+      uz: string;
+      ru: string;
     };
   };
 }>;
@@ -26,64 +27,34 @@ export default function sitemap(): Sitemap {
       priority: 1.0,
       alternates: {
         languages: {
-          en: "https://the-harrys.uz",
+          uz: "https://the-harrys.uz/uz",
+          ru: "https://the-harrys.uz/ru",
         },
       },
     },
     {
-      url: "https://the-harrys.uz/category",
+      url: "https://the-harrys.uz/locations",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
       alternates: {
         languages: {
-          en: "https://the-harrys.uz/category",
+          uz: "https://the-harrys.uz/uz/locations",
+          ru: "https://the-harrys.uz/ru/locations",
         },
       },
     },
     {
-      url: "https://the-harrys.uz/burgers",
+      url: "https://the-harrys.uz/menu",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       alternates: {
         languages: {
-          en: "https://the-harrys.uz/burgers",
+          uz: "https://the-harrys.uz/uz/menu",
+          ru: "https://the-harrys.uz/ru/menu",
         },
       },
-    },
-    {
-      url: "https://the-harrys.uz/hot-dogs",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-      alternates: {
-        languages: {
-          en: "https://the-harrys.uz/hot-dogs",
-        },
-      },
-    },
-    {
-      url: "https://the-harrys.uz/drinks",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-      alternates: {
-        languages: {
-          en: "https://the-harrys.uz/drinks",
-        },
-      },
-    },
-    {
-      url: "https://the-harrys.uz/side-dishes",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-      alternates: {
-        languages: {
-          en: "https://the-harrys.uz/side-dishes",
-        },
-      },
-    },
+    }
   ];
 }

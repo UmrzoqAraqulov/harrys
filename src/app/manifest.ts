@@ -1,5 +1,5 @@
-import {logo_img, mixLogo_img, redLogo_img, whiteLogo_img} from "@/constants";
-import {MetadataRoute} from "next";
+import { logo_img, mixLogo_img, redLogo_img } from "@/constants";
+import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "Harry's COFFEE & SNACKS",
     start_url: '/',
     display: 'standalone',
-    background_color: '#000',
-    theme_color: '#000',
+    background_color: '#fff',
+    theme_color: '#fff',
     icons: [
       {
         src: logo_img.src,
@@ -17,10 +17,6 @@ export default function manifest(): MetadataRoute.Manifest {
       },
       {
         src: mixLogo_img.src,
-        sizes: "192x192",
-        type: 'image/png',
-      }, {
-        src: whiteLogo_img.src,
         sizes: "192x192",
         type: 'image/png',
       }, {

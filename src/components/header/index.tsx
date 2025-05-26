@@ -1,15 +1,19 @@
 "use client"
 
 import { MotionEl } from "@/components";
-import { logo_img, navBg_icon, pathNames, desk_logo_img } from "@/constants";
+import { logo_img, desk_logo_img, user_icon } from "@/constants";
+import { IPageParams } from "@/types";
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, useEffect, useState } from "react";
+import { LocaleSwitcher } from "../locale-switcher";
 
-export const Header: FC = () => {
+export const Header: FC<IPageParams> = () => {
   const [isFixed, setIsFixed] = useState<boolean>(false);
   const { scrollY } = useScroll();
+  const t = useTranslations("header");
 
   useMotionValueEvent(scrollY, 'change', latest => {
     if (latest > 1) {
@@ -28,17 +32,18 @@ export const Header: FC = () => {
           scaleX: 1,
         },
         animate: {
-          scaleX: 2,
+          scaleX: 1,
         }
       }}
       initial="initial"
       animate={isFixed ? "animate" : "initial"}
       transition={{ duration: 0.7, ease: "easeInOut" }}
-      className="w-full fixed top-0 left-0 py-3 bg-white bg-opacity-30"
+      className={`w-full fixed top-0 left-0 py-3 bg-white z-50 ${isFixed ? "shadow-md backdrop-blur-md bg-opacity-50" : "bg-opacity-50"}`}
     >
-      <div className="w-full container flex justify-between ">
-        <div className="flex justify-between items-center gap-5 text-red-500 font-semibold text-xl">
+      <div className="w-full container flex justify-between items-center">
+        <div className="flex justify-between items-center gap-5 font-semibold text-xl">
           <MotionEl
+            once
             delay={.1}
             direction="down"
             className="w-[200px]"
@@ -51,24 +56,44 @@ export const Header: FC = () => {
           </MotionEl>
 
           <MotionEl
+            once
             delay={.3}
             direction="down"
-            el="a"
-            href="/locations"
-            className="cursor-pointer "
           >
-            Наши адреса
+            <Link href="/locations">{t("location")}</Link>
           </MotionEl>
           <MotionEl
+            once
             delay={.5}
             direction="down"
           >
-            <Link href="/about-us">O нас</Link>
+            <Link href="/about-us">{t("about")}</Link>
           </MotionEl>
         </div>
-        <div>
-          <nav>
-          </nav>
+        <div className="flex gap-2 items-center">
+          <MotionEl
+            once
+            direction="down"
+            delay={.7}
+          >
+            <LocaleSwitcher />
+          </MotionEl>
+          <MotionEl
+            once
+            direction="down"
+            delay={.9}
+          >
+            <div className="rounded-lg cursor-pointer bg-white border-1 py-1.5 px-3">
+              <Image
+                className="w-4"
+                width={12}
+                height={14}
+                color="white"
+                src={user_icon.src}
+                alt="user"
+              />
+            </div>
+          </MotionEl>
         </div>
       </div>
     </motion.header>

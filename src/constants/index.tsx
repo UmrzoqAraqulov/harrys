@@ -30,6 +30,8 @@ import desk_logo_img from '@/assets/images/logo-desktop.png';
 import double_chicken_burger from '@/assets/images/double-chicken-burger.png';
 import double_meat_burger from '@/assets/images/double-meat-burger.png';
 import hero_bg_img from '@/assets/images/hero-bg.png'
+import languages_icon from '@/assets/icons/language.svg';
+import user_icon from '@/assets/icons/user.svg';
 
 
 export {
@@ -45,6 +47,7 @@ export {
   navBg_icon,
   redLogo_img,
   burger_icon,
+  languages_icon,
   drinks_icon,
   hotDog_icon,
   mixLogo_img,
@@ -64,17 +67,16 @@ export {
   classicCornDog_img,
   double_chicken_burger,
   double_meat_burger,
+  user_icon,
 
   hero_bg_img
 }
 
 export {
-  navLinks,
-  pathNames,
-  drinksData,
-  drinksList,
-  hotDogData,
-  socialData,
-  burgersData,
-  sideDishesData,
+  localesData,
+  heroImgs
 } from './data';
+
+export {
+  menuData
+} from './menu';

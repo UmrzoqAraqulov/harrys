@@ -1,92 +1,9 @@
-import { BaseLayout } from "@/components";
-import { bg_img, logo_img } from "@/constants";
-import { Providers } from "@/providers";
-import "@/styles/global.scss";
-import { IChildren } from "@/types";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { ReactNode } from 'react';
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  metadataBase: new URL('https://the-harrys.uz'),
-  title: {
-    default: "The Harry's COFFEE & SNACKS",
-    template: "%s | The Harry's COFFEE & SNACKS",
-  },
-  description: "Discover a wide range of delicious snacks and beverages at The Harry's COFFEE & SNACKS.",
-  keywords: "Harry's Coffee, Snacks, Beverages, Menu",
-  authors: [
-    { name: "Ogabek Mustafoev", url: "https://mustafoev-ogabek.vercel.app/" },
-    { name: "The Harry's COFFEE & SNACKS", url: "https://the-harrys.uz" },
-  ],
-  openGraph: {
-    siteName: "The Harry's COFFEE & SNACKS",
-    title: "The Harry's COFFEE & SNACKS",
-    description: "Discover a wide range of delicious snacks and beverages at The Harry's COFFEE & SNACKS.",
-    url: "https://the-harrys.uz",
-    images: [
-      {
-        url: logo_img.src,
-        width: 1200,
-        height: 630,
-        alt: "The Harry's COFFEE & SNACKS",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "The Harry's COFFEE & SNACKS",
-    description: "Discover a wide range of delicious snacks and beverages at The Harry's COFFEE & SNACKS.",
-    images: [
-      {
-        url: logo_img.src,
-        width: 1200,
-        height: 630,
-        alt: "The Harry's COFFEE & SNACKS",
-      },
-    ],
-  },
-  icons: [
-    {
-      url: logo_img.src,
-      type: "image/png",
-      sizes: "1200x630",
-    },
-    {
-      url: logo_img.src,
-      type: "image/png",
-      sizes: "32x32",
-    },
-    {
-      url: logo_img.src,
-      type: "image/png",
-      sizes: "16x16",
-    },
-  ],
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://the-harrys.uz",
-    languages: {
-      en: "https://the-harrys.uz",
-    },
-  },
+type Props = {
+  children: ReactNode;
 };
 
-export default function RootLayout({ children }: Readonly<IChildren>) {
-  return (
-    <html lang="ru" className="dark">
-      <body
-        style={{ background: "#e5e5e5" }}
-        className={`${inter.className} relative text-white`}
-      >
-        <Providers>
-          <BaseLayout>
-            {children}
-          </BaseLayout>
-        </Providers>
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Props) {
+  return children;
 }
