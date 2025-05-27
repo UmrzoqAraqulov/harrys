@@ -1,4 +1,4 @@
-import { logo_img, mixLogo_img, redLogo_img } from "@/constants";
+import { logo_img, desk_logo_img } from "@/constants";
 import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
@@ -16,14 +16,10 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/svg+xml',
       },
       {
-        src: mixLogo_img.src,
+        src: desk_logo_img.src,
         sizes: "192x192",
         type: 'image/png',
-      }, {
-        src: redLogo_img.src,
-        sizes: "192x192",
-        type: 'image/png',
-      }
+      },
     ],
   };
 }

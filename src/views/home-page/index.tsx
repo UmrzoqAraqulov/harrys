@@ -1,67 +1,53 @@
 "use client"
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { FC } from "react";
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { heroImgs } from '@/constants';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
-import { heroImgs, menuData } from '@/constants';
-import Image from 'next/image';
-import { useTranslations } from 'next-intl';
-import CustomCard from '@/components/custom-card';
 
 export const HomePage: FC = () => {
   const t = useTranslations("home");
 
   return (
-    <section className="page">
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        {heroImgs.map(el =>
-          <SwiperSlide>
-            <Image
-              width={1}
-              height={1}
-              className="w-full max-w-[700px] h-full max-h-[500px] rounded-none"
-              src={el.src}
-              alt="selected"
-            />
-          </SwiperSlide>
-        )}
-      </Swiper>
-      <div className="flex">
-        {/* Sidebar */}
-        <div className="w-64 p-4 bg-white shadow h-screen sticky top-0">
-          {/* <Scrollspy
-            items={menuData.map(s => s.title)}
-            currentClassName="bg-pink-100 text-red-600 font-semibold"
-            componentTag="ul"
-            className="space-y-1"
-          >
-            {menuData.map(({ title, }, id) => (
-              <li
-                key={id}
-                className="px-4 py-2 rounded hover:bg-pink-50 cursor-pointer text-sm flex items-center gap-2"
-              >
-                <span>🍗</span> <a href={`#${id}`}>{title}</a>
-              </li>
-            ))}
-          </Scrollspy> */}
-        </div>
+    <section className="page container h-full">
+      <div className="flex justify-start relative w-full sm:w-2/3 items-center h-full">
+        <Swiper
+          modules={[Navigation]}
+          className="w-full"
+          spaceBetween={30}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={{
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+          }}
+        >
+          {heroImgs.map((el, id) =>
+            <SwiperSlide key={id} className="rounded-3xl">
+              <Image
+                width={2000}
+                height={500}
+                className="w-full object-cover rounded-3xl"
+                src={el.src}
+                alt="selected"
+              />
+            </SwiperSlide>
+          )}
+          <div className="custom-swiper-nav">
+            <button className="swiper-button-prev custom-swiper-button" />
+            <button className="swiper-button-next custom-swiper-button" />
+          </div>
+        </Swiper>
 
-        {/* Content */}
-        <div className="flex-1 p-6 overflow-y-auto">
-          {menuData.map(({ title }, id) => (
-            <section id={id + ""} key={id} className="scroll-mt-28">
-              <h2 className="text-2xl font-bold mb-4">{title}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {[...Array(3)].map((_, idx) => (
-                  <CustomCard />
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
       </div>
     </section>
   )

@@ -3,13 +3,13 @@ import { NextIntlClientProvider, useMessages, useTranslations } from "next-intl"
 import { Inter } from "next/font/google";
 
 import { BaseLayout, GoogleAnalytics } from "@/components";
-import { logo_img } from "@/constants";
+import { hero_bg_img, logo_img } from "@/constants";
 import { Providers } from "@/providers";
 import { TLocale } from "@/types";
 
 import "@/styles/global.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: "500" });
 
 type Props = {
   children: ReactNode;
@@ -53,7 +53,6 @@ export default function LocalLayout({ children, params: { locale } }: Readonly<P
         <link rel="icon" type="image/svg+xml" sizes="32x32" href={logo_img.src} />
       </head>
       <body
-        style={{ background: "#e5e5e5" }}
         className={inter.className}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>

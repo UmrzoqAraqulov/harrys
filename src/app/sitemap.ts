@@ -45,14 +45,14 @@ export default function sitemap(): Sitemap {
       },
     },
     {
-      url: "https://the-harrys.uz/menu",
+      url: "https://the-harrys.uz/about",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       alternates: {
         languages: {
-          uz: "https://the-harrys.uz/uz/menu",
-          ru: "https://the-harrys.uz/ru/menu",
+          uz: "https://the-harrys.uz/uz/about",
+          ru: "https://the-harrys.uz/ru/about",
         },
       },
     }

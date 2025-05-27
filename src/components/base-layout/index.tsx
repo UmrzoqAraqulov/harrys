@@ -1,6 +1,7 @@
 import { TLocale } from "@/types";
 import { FC, ReactNode } from "react";
 import { Header } from "../";
+import { hero_bg_img } from "@/constants";
 
 interface IBaseLayout {
   children: ReactNode;
@@ -11,7 +12,10 @@ export const BaseLayout: FC<Readonly<IBaseLayout>> = ({ children, locale }) => {
   return (
     <>
       <Header locale={locale} />
-      <main className="overflow-x-hidden overflow-y-auto container">
+      <main
+        style={{ background: `url(${hero_bg_img.src})`, width: "100%", height: "100vh" }}
+        className="overflow-y-auto bg-center bg-cover"
+      >
         {children}
       </main>
     </>

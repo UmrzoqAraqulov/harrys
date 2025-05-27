@@ -41,7 +41,7 @@ export const Header: FC<IPageParams> = () => {
       className={`w-full fixed top-0 left-0 py-3 bg-white z-50 ${isFixed ? "shadow-md backdrop-blur-md bg-opacity-50" : "bg-opacity-50"}`}
     >
       <div className="w-full container flex justify-between items-center">
-        <div className="flex justify-between items-center gap-5 font-semibold text-xl">
+        <div className="flex justify-between items-center gap-5 text-xl">
           <MotionEl
             once
             delay={.1}
