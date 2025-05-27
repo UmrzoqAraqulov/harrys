@@ -39,12 +39,8 @@ html {
 }
 
 section.page {
-  padding-top: 5rem;
+  padding-top: 6rem;
   padding-bottom: 3rem;
-
-  @include mixin.media(768px) {
-    padding-top: 6rem;
-  }
 }
 
 .wave-loader {
@@ -91,31 +87,32 @@ section.page {
   background: #971010;
 }
 
-.custom-swiper-nav {
-  position: absolute;
-  bottom: 30px;
-  right: 60px;
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-}
-
 .custom-swiper-button {
   background-color: white;
-  border-radius: 9999px;
-  width: 42px !important;
+  border-radius: 50px;
+  width: 50px !important;
+  height: 50px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+
+  @include mixin.media(600px) {
+    width: 35px !important;
+    height: 35px !important;
+  }
 }
 
 .custom-swiper-button::after {
-  font-size: 25px !important;
+  font-size: 20px !important;
   font-weight: bold;
   color: red;
+
+  @include mixin.media(768px) {
+    font-size: 30px !important;
+  }
 }
 
 .custom-swiper-button:hover {
-  background-color: gray;
+  background-color: rgb(231, 231, 231);
 }

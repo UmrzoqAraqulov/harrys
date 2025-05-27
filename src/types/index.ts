@@ -10,7 +10,7 @@ export type TPath = Record<string, string>
 export interface IData {
   price: number;
   type?: string;
-  title?: string;
+  title: string;
   secondPrice?: number;
   secondTitle?: string;
   image: StaticImageData;

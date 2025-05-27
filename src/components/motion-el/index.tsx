@@ -1,7 +1,7 @@
 "use client"
 
-import {motion} from 'framer-motion';
-import {FC, ReactNode} from 'react';
+import { motion } from 'framer-motion';
+import { FC, ReactNode } from 'react';
 
 const motionComponents = {
   p: motion.p,
@@ -36,24 +36,24 @@ export const MotionEl: FC<IMotionMotionEl> = (props) => {
     scale = 1,
     once = true,
     direction = 'up',
-    duration = 0.8,
+    duration = 0.5,
     delay = 0,
     el = 'div',
     ...prop
   } = props;
 
   const animationStart = {
-    left: {opacity: 0, x: -35, scale: scale ?? 1},
-    right: {opacity: 0, x: 35, scale: scale ?? 1},
-    up: {opacity: 0, y: 35, scale: scale ?? 1},
-    down: {opacity: 0, y: -35, scale: scale ?? 1},
+    left: { opacity: 0, x: -35, scale: scale ?? 1 },
+    right: { opacity: 0, x: 35, scale: scale ?? 1 },
+    up: { opacity: 0, y: 35, scale: scale ?? 1 },
+    down: { opacity: 0, y: -35, scale: scale ?? 1 },
   };
 
   const animationEnd = {
-    left: {opacity: 1, x: 0, scale: 1},
-    right: {opacity: 1, x: 0, scale: 1},
-    up: {opacity: 1, y: 0, scale: 1},
-    down: {opacity: 1, y: 0, scale: 1},
+    left: { opacity: 1, x: 0, scale: 1 },
+    right: { opacity: 1, x: 0, scale: 1 },
+    up: { opacity: 1, y: 0, scale: 1 },
+    down: { opacity: 1, y: 0, scale: 1 },
   };
 
   const MotionComponent = motionComponents[el];
@@ -66,8 +66,8 @@ export const MotionEl: FC<IMotionMotionEl> = (props) => {
       }}
       initial="initial"
       whileInView="animate"
-      viewport={{once}}
-      transition={{duration, delay}}
+      viewport={{ once }}
+      transition={{ duration, delay }}
       className={className}
       {...prop}
     >

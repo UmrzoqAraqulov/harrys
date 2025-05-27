@@ -1,29 +1,18 @@
 "use client"
 
-import { MotionEl } from "@/components";
-import { logo_img, desk_logo_img, user_icon } from "@/constants";
-import { IPageParams } from "@/types";
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { FC, useState } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, useEffect, useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+
+import { MotionEl } from "@/components";
+import { logo_img, desk_logo_img, user_icon } from "@/constants";
+import { IPageParams } from "@/types";
 import { LocaleSwitcher } from "../locale-switcher";
 
 export const Header: FC<IPageParams> = () => {
-  const [isFixed, setIsFixed] = useState<boolean>(false);
-  const { scrollY } = useScroll();
   const t = useTranslations("header");
-
-  useMotionValueEvent(scrollY, 'change', latest => {
-    if (latest > 1) {
-      setIsFixed(true);
-      localStorage.setItem('isFixed', JSON.stringify(true))
-    } else {
-      setIsFixed(false);
-      localStorage.setItem('isFixed', JSON.stringify(false))
-    }
-  });
 
   return (
     <motion.header
@@ -32,21 +21,21 @@ export const Header: FC<IPageParams> = () => {
           scaleX: 1,
         },
         animate: {
-          scaleX: 1,
+          scaleX: 2,
         }
       }}
       initial="initial"
-      animate={isFixed ? "animate" : "initial"}
+      animate={"initial"}
       transition={{ duration: 0.7, ease: "easeInOut" }}
-      className={`w-full fixed top-0 left-0 py-3 bg-white z-50 ${isFixed ? "shadow-md backdrop-blur-md bg-opacity-50" : "bg-opacity-50"}`}
+      className={`w-full fixed top-0 left-0 py-3 bg-white z-50 "shadow-md backdrop-blur-md bg-opacity-70`}
     >
       <div className="w-full container flex justify-between items-center">
-        <div className="flex justify-between items-center gap-5 text-xl">
+        <div className="flex justify-between items-center gap-5 sm:text-xl">
           <MotionEl
             once
             delay={.1}
             direction="down"
-            className="w-[200px]"
+            className="w-[50px] sm:w-[200px]"
           >
             <Link href="/">
               <Image src={logo_img} className="h-full sm:hidden z-50 w-full object-center object-contain" alt="logo" />
@@ -57,14 +46,14 @@ export const Header: FC<IPageParams> = () => {
 
           <MotionEl
             once
-            delay={.3}
+            delay={.2}
             direction="down"
           >
             <Link href="/locations">{t("location")}</Link>
           </MotionEl>
           <MotionEl
             once
-            delay={.5}
+            delay={.3}
             direction="down"
           >
             <Link href="/about-us">{t("about")}</Link>
@@ -74,14 +63,14 @@ export const Header: FC<IPageParams> = () => {
           <MotionEl
             once
             direction="down"
-            delay={.7}
+            delay={.4}
           >
             <LocaleSwitcher />
           </MotionEl>
           <MotionEl
             once
             direction="down"
-            delay={.9}
+            delay={.5}
           >
             <div className="rounded-lg cursor-pointer bg-white border-1 py-1.5 px-3">
               <Image
