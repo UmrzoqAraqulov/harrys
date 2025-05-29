@@ -14,6 +14,7 @@ export interface IData {
   secondPrice?: number;
   secondTitle?: string;
   image: StaticImageData;
+  isChecken?: boolean,
 }
 
 export type TLocale = "uz" | "ru";
@@ -33,4 +34,8 @@ export interface ILocalesData {
 export interface INewsImages {
   img: string;
   key: string;
+}
+export interface LocationType {
+  title: string,
+  href: string;
 }

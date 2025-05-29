@@ -43,6 +43,14 @@ section.page {
   padding-bottom: 3rem;
 }
 
+.hero {
+  height: auto;
+
+  @include mixin.media(1024px) {
+    height: calc(100vh - 350px);
+  }
+}
+
 .wave-loader {
   position: relative;
   background: #555;
@@ -84,22 +92,22 @@ section.page {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #971010;
+  background: #ff0000;
 }
 
 .custom-swiper-button {
   background-color: white;
   border-radius: 50px;
-  width: 50px !important;
-  height: 50px !important;
+  width: 35px !important;
+  height: 35px !important;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
 
-  @include mixin.media(600px) {
-    width: 35px !important;
-    height: 35px !important;
+  @include mixin.media(768px) {
+    width: 50px !important;
+    height: 50px !important;
   }
 }
 

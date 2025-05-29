@@ -5,10 +5,13 @@ import goBack_icon from '@/assets/icons/go-back.svg';
 import home_icon from '@/assets/icons/home.svg';
 import hotDog_icon from '@/assets/icons/hot-dog.svg';
 import instagram_icon from '@/assets/icons/instagram.svg';
+import telegram_icon from '@/assets/icons/telegram.svg';
 import location_icon from '@/assets/icons/location.svg';
 import sideDishes_icon from '@/assets/icons/side-dishes.svg';
 import user_icon from '@/assets/icons/user.svg';
 import languages_icon from '@/assets/icons/language.svg';
+import left_icon from '@/assets/icons/left.svg';
+import right_icon from '@/assets/icons/right.svg';
 
 import logo_img from '@/assets/images/logo.png';
 import desk_logo_img from '@/assets/images/logo-desktop.png';
@@ -27,6 +30,9 @@ export {
   instagram_icon,
   sideDishes_icon,
   user_icon,
+  left_icon,
+  right_icon,
+  telegram_icon,
 
   desk_logo_img,
   logo_img,
@@ -39,11 +45,6 @@ export {
 } from './data';
 
 export {
-  burgerData,
-  hotDogData,
-  harrysterData,
-  clubSandwichData,
-  friData,
-  sousData,
-  drinksData
+  menuData,
+  menuCategories
 } from './menu';

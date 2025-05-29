@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { MotionEl } from "@/components";
 import { logo_img, desk_logo_img, user_icon } from "@/constants";
@@ -13,6 +13,7 @@ import { LocaleSwitcher } from "../locale-switcher";
 
 export const Header: FC<IPageParams> = () => {
   const t = useTranslations("header");
+  const [searchText, setSearchText] = useState<string>("");
 
   return (
     <motion.header
@@ -21,16 +22,16 @@ export const Header: FC<IPageParams> = () => {
           scaleX: 1,
         },
         animate: {
-          scaleX: 2,
+          scaleX: 1,
         }
       }}
       initial="initial"
       animate={"initial"}
       transition={{ duration: 0.7, ease: "easeInOut" }}
-      className={`w-full fixed top-0 left-0 py-3 bg-white z-50 "shadow-md backdrop-blur-md bg-opacity-70`}
+      className={`w-full fixed top-0 left-0 py-3 bg-white z-50 shadow-md backdrop-blur-md bg-opacity-70`}
     >
       <div className="w-full container flex justify-between items-center">
-        <div className="flex justify-between items-center gap-5 sm:text-xl">
+        <div className="items-center gap-3 sm:text-xl flex">
           <MotionEl
             once
             delay={.1}
@@ -39,7 +40,10 @@ export const Header: FC<IPageParams> = () => {
           >
             <Link href="/">
               <Image src={logo_img} className="h-full sm:hidden z-50 w-full object-center object-contain" alt="logo" />
-              <Image src={desk_logo_img} alt="logo"
+              <Image
+                src={desk_logo_img}
+                alt="logo"
+                priority
                 className="h-full hidden sm:block z-50 w-full object-center object-contain" />
             </Link>
           </MotionEl>
@@ -56,8 +60,20 @@ export const Header: FC<IPageParams> = () => {
             delay={.3}
             direction="down"
           >
-            <Link href="/about-us">{t("about")}</Link>
+            <Link href="/about">{t("about")}</Link>
           </MotionEl>
+          {/* <MotionEl
+            once
+            delay={.4}
+            direction="down"
+            className="text-nowrap"
+          >
+            <input
+              placeholder="Search"
+              onChange={(e) => setSearchText(e.target.value)}
+              value={searchText}
+              className="border-none shadow-md outline-none focus:outline-none py-1.5 px-3 rounded-md text-base bg-white bg-opacity-70" />
+          </MotionEl> */}
         </div>
         <div className="flex gap-2 items-center">
           <MotionEl
@@ -70,6 +86,7 @@ export const Header: FC<IPageParams> = () => {
           <MotionEl
             once
             direction="down"
+            className="hidden sm:block"
             delay={.5}
           >
             <div className="rounded-lg cursor-pointer bg-white border-1 py-1.5 px-3">

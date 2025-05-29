@@ -28,7 +28,7 @@ export const LocaleSwitcher: FC<ILocaleSwitcher> = ({ className }) => {
       placeholder="Select"
       startContent={
         <Image
-          className="w-12 h-7 rounded-none"
+          className="sm:w-12 h-7 rounded-none"
           src={languages_icon.src}
           alt="selected"
         />

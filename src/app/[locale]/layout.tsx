@@ -51,6 +51,10 @@ export default function LocalLayout({ children, params: { locale } }: Readonly<P
         <link rel="apple-touch-icon" href={logo_img.src} type="image/png" sizes="any" />
         <link rel="icon" type="image/svg+xml" sizes="192x192" href={logo_img.src} />
         <link rel="icon" type="image/svg+xml" sizes="32x32" href={logo_img.src} />
+        <script
+          src={`https://api-maps.yandex.ru/2.1/?apikey=${process.env.NEXT_PUBLIC_YANDEX_API_KEY}&lang=uz_UZ`}
+          type="text/javascript"
+        />
       </head>
       <body
         className={inter.className}
