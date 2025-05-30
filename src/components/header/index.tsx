@@ -15,7 +15,7 @@ export const Header: FC<IPageParams> = () => {
   const t = useTranslations("header");
   const [openBar, setOpenBar] = useState<boolean>(false)
 
-  const navStyle = `${openBar ? "right-0" : "-right-full"} flex gap-3 fixed md:static w-2/3 md:w-auto h-screen md:h-auto flex-col md:flex-row bg-white md:bg-transparent top-0 right-0 z-50 p-5 pt-[13%] md:p-0 duration-500`
+  const navStyle = `${openBar ? "right-0" : "-right-full"} flex gap-3 fixed md:static w-2/3 md:w-auto h-screen md:h-auto flex-col md:flex-row bg-white md:bg-transparent top-0 z-50 p-5 pt-[13%] md:p-0 duration-500`
   const navItemStyle = "block bg-primary py-2 px-4 rounded-md text-white hover:scale-105 hover:-translate-y-0.5 text-center md:py-1 text-base sm:text-lg md:text-base"
 
   const handleOpen = () => {
@@ -81,7 +81,7 @@ export const Header: FC<IPageParams> = () => {
             >
               <Link className={navItemStyle} href="/about">{t("about")}</Link>
             </MotionEl>
-            <Image onClick={handleClose} className="absolute top-2 left-2 w-6 hover:scale-110 cursor-pointer" src={close_icon} alt="close icon" />
+            <Image onClick={handleClose} className="absolute top-2 left-2 w-6 hover:scale-110 cursor-pointer md:hidden" src={close_icon} alt="close icon" />
 
           </div>
 
