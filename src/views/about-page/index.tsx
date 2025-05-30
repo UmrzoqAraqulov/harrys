@@ -12,7 +12,7 @@ export const AboutPage: FC = () => {
   const t = useTranslations();
   const [openModal, setOpenModal] = useState<boolean>(false)
 
-  const linkStyle = "w-full px-10 sm:px-32 text-xl sm:text-[22px] py-3 sm:py-4 bg-primary text-white flex rounded-xl items-center gap-5 shadow-md duration-200 hover:bg-opacity-50"
+  const linkStyle = "w-full px-10 sm:px-28 text-xl sm:text-[22px] py-3 sm:py-4 bg-primary text-white flex rounded-xl items-center gap-5 shadow-md duration-200 hover:bg-opacity-50"
 
   const handleCopy = async () => {
     try {
@@ -69,9 +69,9 @@ export const AboutPage: FC = () => {
           delay={.3}
           className="w-full"
         >
-          <Button
+          <div
             onClick={handleOpenModal}
-            className={`${linkStyle} h-[64px] md:h-[72px]`}
+            className={`${linkStyle} cursor-pointer`}
           >
             <Image
               src={call_icon}
@@ -79,7 +79,7 @@ export const AboutPage: FC = () => {
               className="h-10 sm:h-9 w-max "
             />
             <p>{t("phone")}</p>
-          </Button>
+          </div>
         </MotionEl>
         <MotionEl
           delay={.4}

@@ -74,21 +74,21 @@ export const Header: FC<IPageParams> = () => {
               delay={.2}
               direction="down"
             >
-              <Link className={navItemStyle} href="/main">{t("main")}</Link>
+              <Link className={navItemStyle} onClick={handleClose} href="/main">{t("main")}</Link>
             </MotionEl>
             <MotionEl
               once
               delay={.3}
               direction="down"
             >
-              <Link className={navItemStyle} href="/locations">{t("location")}</Link>
+              <Link className={navItemStyle} onClick={handleClose} href="/locations">{t("location")}</Link>
             </MotionEl>
             <MotionEl
               once
               delay={.4}
               direction="down"
             >
-              <Link className={navItemStyle} href="/about">{t("about")}</Link>
+              <Link className={navItemStyle} onClick={handleClose} href="/about">{t("about")}</Link>
             </MotionEl>
             <Image onClick={handleClose} className="absolute top-2 left-2 w-6 hover:scale-110 cursor-pointer md:hidden" src={close_icon} alt="close icon" />
 
