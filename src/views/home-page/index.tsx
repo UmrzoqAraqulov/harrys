@@ -94,23 +94,23 @@ export const HomePage: FC = () => {
 
 
         {/* Kategoriya menyusi */}
-        <div className="3xl:px-2 px-4 py-2 bg-white sticky top-[76px] z-10 shadow rounded-xl mt-5">
+        <div className="3xl:px-2 px-4 pb-2 pt-3 bg-white sticky top-[75px] z-10 shadow rounded-xl mt-5">
           <button
-            className="absolute 3xl:hidden left-1 top-1/2 -translate-y-1/2 z-20 bg-gray-200 py-2 px-3 rounded-full"
+            className="absolute 3xl:hidden left-1 top-1/2 -translate-y-1/2 z-20 bg-gray-200 py-1 px-2 sm:px-3 sm:py-2 rounded-full"
             onClick={() => scrollByCategory('left')}
           >
-            <Image src={left_icon} alt="left icon" width={15} />
+            <Image src={left_icon} alt="left icon" width={13} />
           </button>
 
           <div
             ref={scrollContainerRef}
-            className="flex overflow-x-auto gap-3 px-8 pb-1 scrollbar-hide"
+            className="flex overflow-x-auto gap-1 sm:gap-3 px-5 sm:px-8 pb-1 scrollbar-hide"
           >
             {menuCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => scrollToSection(category)}
-                className="whitespace-nowrap px-4 py-2 rounded-full bg-gray-100 hover:bg-red-200 transition"
+                className="whitespace-nowrap px-2 text-[15px] sm:text-base py-1 sm:px-4 sm:py-2 rounded-full bg-gray-100 hover:bg-red-200 transition"
               >
                 {t(`menu.${category}`)}
               </button>
@@ -118,17 +118,17 @@ export const HomePage: FC = () => {
           </div>
 
           <button
-            className="absolute 3xl:hidden right-1 top-1/2 -translate-y-1/2 z-20 bg-gray-200 py-2 px-3 rounded-full"
+            className="absolute 3xl:hidden right-1 top-1/2 -translate-y-1/2 z-20 bg-gray-200 py-1 px-2 sm:px-3 sm:py-2 rounded-full"
             onClick={() => scrollByCategory('right')}
           >
-            <Image src={right_icon} alt="right icon" width={15} />
+            <Image src={right_icon} alt="right icon" width={13} />
           </button>
         </div>
 
 
         {menuCategories.map((category) => (
           <div key={category} className="pt-6" id={category}>
-            <h1 className="font-bold text-[26px] md:text-[32px]">{t(`menu.${category}`)}</h1>
+            <h1 className="font-bold text-[24px] md:text-[32px]">{t(`menu.${category}`)}</h1>
             {<div className={`grid ${gridClassMap[category]} py-3 gap-3`}>
               {
                 menuData

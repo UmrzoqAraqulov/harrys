@@ -7,13 +7,24 @@ import Link from "next/link";
 import { motion } from 'framer-motion';
 
 import { MotionEl } from "@/components";
-import { logo_img, desk_logo_img, user_icon } from "@/constants";
+import { logo_img, desk_logo_img, user_icon, bar_icon, close_icon } from "@/constants";
 import { IPageParams } from "@/types";
 import { LocaleSwitcher } from "../locale-switcher";
 
 export const Header: FC<IPageParams> = () => {
   const t = useTranslations("header");
-  const [searchText, setSearchText] = useState<string>("");
+  const [openBar, setOpenBar] = useState<boolean>(false)
+
+  const navStyle = `${openBar ? "right-0" : "-right-full"} flex gap-3 fixed md:static w-2/3 md:w-auto h-screen md:h-auto flex-col md:flex-row bg-white md:bg-transparent top-0 right-0 z-50 p-5 pt-[13%] md:p-0 duration-500`
+  const navItemStyle = "block bg-primary py-2 px-4 rounded-md text-white hover:scale-105 hover:-translate-y-0.5 text-center md:py-1 text-base sm:text-lg md:text-base"
+
+  const handleOpen = () => {
+    setOpenBar(true)
+  }
+
+  const handleClose = () => {
+    setOpenBar(false)
+  }
 
   return (
     <motion.header
@@ -28,10 +39,10 @@ export const Header: FC<IPageParams> = () => {
       initial="initial"
       animate={"initial"}
       transition={{ duration: 0.7, ease: "easeInOut" }}
-      className={`w-full fixed top-0 left-0 py-3 bg-white z-50 shadow-md backdrop-blur-md bg-opacity-70`}
+      className={`w-full fixed top-0 left-0 py-3 bg-white z-50 shadow-md backdrop-blur-md bg-opacity-70 `}
     >
       <div className="w-full container flex justify-between items-center">
-        <div className="items-center gap-3 sm:text-xl flex">
+        <div className="items-center gap-12 flex">
           <MotionEl
             once
             delay={.1}
@@ -48,20 +59,32 @@ export const Header: FC<IPageParams> = () => {
             </Link>
           </MotionEl>
 
-          <MotionEl
-            once
-            delay={.2}
-            direction="down"
-          >
-            <Link href="/locations">{t("location")}</Link>
-          </MotionEl>
-          <MotionEl
-            once
-            delay={.3}
-            direction="down"
-          >
-            <Link href="/about">{t("about")}</Link>
-          </MotionEl>
+          <div className={navStyle}>
+            <MotionEl
+              once
+              delay={.2}
+              direction="down"
+            >
+              <Link className={navItemStyle} href="/">{t("main")}</Link>
+            </MotionEl>
+            <MotionEl
+              once
+              delay={.3}
+              direction="down"
+            >
+              <Link className={navItemStyle} href="/locations">{t("location")}</Link>
+            </MotionEl>
+            <MotionEl
+              once
+              delay={.4}
+              direction="down"
+            >
+              <Link className={navItemStyle} href="/about">{t("about")}</Link>
+            </MotionEl>
+            <Image onClick={handleClose} className="absolute top-2 left-2 w-6 hover:scale-110 cursor-pointer" src={close_icon} alt="close icon" />
+
+          </div>
+
           {/* <MotionEl
             once
             delay={.4}
@@ -86,7 +109,6 @@ export const Header: FC<IPageParams> = () => {
           <MotionEl
             once
             direction="down"
-            className="hidden sm:block"
             delay={.5}
           >
             <div className="rounded-lg cursor-pointer bg-white border-1 py-1.5 px-3">
@@ -100,8 +122,26 @@ export const Header: FC<IPageParams> = () => {
               />
             </div>
           </MotionEl>
+          <MotionEl
+            once
+            direction="down"
+            className="md:hidden block"
+            delay={.6}
+          >
+            <div onClick={handleOpen} className="rounded-lg cursor-pointer bg-white border-1 py-1 px-2">
+              <Image
+                className="w-5 cursor-pointer"
+                width={16}
+                height={16}
+                color="white"
+                src={bar_icon.src}
+                alt="user"
+              />
+            </div>
+          </MotionEl>
         </div>
       </div>
+      <div onClick={handleClose} className={`${openBar ? "right-0" : "-right-full"} fixed top-0 w-full h-screen z-40 bg-black bg-opacity-30 cursor-pointer`} />
     </motion.header>
   )
 }

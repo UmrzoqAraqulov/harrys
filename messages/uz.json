@@ -1,7 +1,8 @@
 {
   "header": {
     "location": "Filiallar",
-    "about": "Biz haqimizda"
+    "about": "Biz haqimizda",
+    "main": "Asosiy"
   },
   "home": {
     "menu": "Menyu",
