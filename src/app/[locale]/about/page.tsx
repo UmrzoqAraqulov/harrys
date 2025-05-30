@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import { getTranslations } from 'next-intl/server';
 
 import { IParams } from "@/types";
-import { AboutPage } from "@/views/about-page";
+import { AboutPage } from "@/views";
 
 export async function generateMetadata(
   { params }: IParams,
 ): Promise<Metadata> {
   const t = await getTranslations();
-
 
   return {
     keywords: t('keywords'),

@@ -1,13 +1,4 @@
 {
-  "header": {
-    "location": "Filiallar",
-    "about": "Biz haqimizda",
-    "main": "Asosiy"
-  },
-  "home": {
-    "menu": "Menyu",
-    "sum": "so'm"
-  },
   "menu": {
     "combo": "Kombolar",
     "meatBurger": "Go'shtli Burgerlar",
@@ -69,15 +60,15 @@
     "fuse_tea_half": "Fuse Tea 0.5l",
     "bon_aqua_half": "Bon Aqua 0.5l"
   },
-  "locations": {
-    "ourBranches": "Bizning filiallar"
-  },
-  "about": {
-    "about": "Biz haqimizda",
-    "instagram": "Bizning insatagram",
-    "telegram": "Bizning telegram",
-    "phone": "Biz bilan bog'lanish"
-  },
+  "location": "Filiallar",
+  "about": "Biz haqimizda",
+  "main": "Asosiy",
+  "ourBranches": "Bizning filiallar",
+  "instagram": "Bizning insatagram",
+  "telegram": "Bizning telegram",
+  "phone": "Biz bilan bog'lanish",
+  "callTo": "Qo'ng'iroq qilish",
+  "sum": "so'm",
   "keywords": "",
   "description": "Ijtimoiy havolalarimizni kashf eting, biz ommaviy axborot vositalarida yangi menyu va mahsulotlarni e'lon qilamiz, birinchi buyurtma bo'ling! Siz The Garry's COFFEE & SNACKS-da burgerlar, yonma-ovqatlar, ichimliklar va hotdoglarni o'z ichiga olgan turli toifalarni topishingiz mumkin."
 }

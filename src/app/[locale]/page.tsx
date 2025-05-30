@@ -1,6 +1,7 @@
 import { logo_img } from "@/constants";
 import { IParams } from "@/types";
 import { HomePage } from "@/views";
+import { AboutPage } from "@/views/about-page";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
@@ -10,7 +11,7 @@ export async function generateMetadata(
   const t = await getTranslations();
 
   return {
-    title: "Get in touch - The Harry's coffee & snacks",
+    title: "About Us - The Harry's Coffee & Snacks",
     description: t('description'),
     keywords: "Harry's Coffee, Snacks, Burgers, Side Dishes, Drinks, Hotdogs, Menu Categories",
     metadataBase: new URL(`https://the-harrys.uz/${params.locale}`),

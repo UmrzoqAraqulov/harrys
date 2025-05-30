@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from 'next-intl/server';
 
 import { IParams } from "@/types";
-import { LocationsPage } from "@/views/locations-page";
+import { LocationsPage } from "@/views";
 
 export async function generateMetadata(
   { params }: IParams,
@@ -11,7 +11,7 @@ export async function generateMetadata(
 
   return {
     keywords: t('keywords'),
-    metadataBase: new URL(`https://mrce-group.uz/${params.locale}/about`),
+    metadataBase: new URL(`https://mrce-group.uz/${params.locale}/locations`),
     robots: {
       index: true,
       follow: true,

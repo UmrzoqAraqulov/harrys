@@ -18,7 +18,7 @@ const locations = [
 ];
 
 export const LocationsPage: FC = () => {
-  const t = useTranslations('locations');
+  const t = useTranslations();
 
   const locationStyle = "bg-primary text-white p-2 md:p-4 rounded-lg shadow-md mb-4 border-2 border-red-200 flex cursor-pointer items-center gap-2 hover:bg-opacity-50 transition-colors duration-200";
 

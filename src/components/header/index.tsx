@@ -12,10 +12,10 @@ import { IPageParams } from "@/types";
 import { LocaleSwitcher } from "../locale-switcher";
 
 export const Header: FC<IPageParams> = () => {
-  const t = useTranslations("header");
+  const t = useTranslations();
   const [openBar, setOpenBar] = useState<boolean>(false)
 
-  const navStyle = `${openBar ? "right-0" : "-right-full"} flex gap-3 fixed md:static w-2/3 md:w-auto h-screen md:h-auto flex-col md:flex-row bg-white md:bg-transparent top-0 z-50 p-5 pt-[13%] md:p-0 duration-500`
+  const navStyle = `${openBar ? "right-0" : "-right-full"} flex gap-3 fixed md:static w-2/3 md:w-auto h-screen md:h-auto flex-col md:flex-row bg-white md:bg-transparent top-0 z-50 p-5 pt-[6%] md:p-0 duration-500`
   const navItemStyle = "block bg-primary py-2 px-4 rounded-md text-white hover:scale-105 hover:-translate-y-0.5 text-center md:py-1 text-base sm:text-lg md:text-base"
 
   const handleOpen = () => {
@@ -43,29 +43,38 @@ export const Header: FC<IPageParams> = () => {
     >
       <div className="w-full container flex justify-between items-center">
         <div className="items-center gap-12 flex">
+
           <MotionEl
             once
             delay={.1}
             direction="down"
-            className="w-[50px] sm:w-[200px]"
+            className="w-[150px] sm:w-[200px]"
           >
-            <Link href="/">
-              <Image src={logo_img} className="h-full sm:hidden z-50 w-full object-center object-contain" alt="logo" />
+            <Link href="/main">
               <Image
                 src={desk_logo_img}
                 alt="logo"
                 priority
-                className="h-full hidden sm:block z-50 w-full object-center object-contain" />
+                className="h-full z-50 w-full object-center object-contain" />
             </Link>
           </MotionEl>
 
           <div className={navStyle}>
+
+            <MotionEl
+              once
+              direction="down"
+              delay={.1}
+              className="md:hidden flex justify-center"
+            >
+              <LocaleSwitcher className="shadow-lg md:shadow-none" />
+            </MotionEl>
             <MotionEl
               once
               delay={.2}
               direction="down"
             >
-              <Link className={navItemStyle} href="/">{t("main")}</Link>
+              <Link className={navItemStyle} href="/main">{t("main")}</Link>
             </MotionEl>
             <MotionEl
               once
@@ -103,6 +112,7 @@ export const Header: FC<IPageParams> = () => {
             once
             direction="down"
             delay={.4}
+            className="hidden md:block"
           >
             <LocaleSwitcher />
           </MotionEl>

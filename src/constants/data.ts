@@ -1,6 +1,6 @@
-import hero_first_img from '@/assets/images/hero-slider-1.png';
-import hero_second_img from '@/assets/images/hero-slider-2.png';
-import hero_third_img from '@/assets/images/hero-slider-3.png';
+import hero_first_img from '@/assets/pictures/hero-slider-1.jpg';
+import hero_second_img from '@/assets/pictures/hero-slider-2.jpg';
+import hero_third_img from '@/assets/pictures/hero-slider-3.jpg';
 
 import { ILocalesData, LocationType } from "@/types";
 

@@ -1,58 +1,58 @@
-import chicken_burger from '@/assets/images/tovuq-burger.jpg';
-import chicken_bbq_burger from '@/assets/images/tovuq-BBQ-burger.jpg';
-import chicken_chizburger from '@/assets/images/tovuq-chizburger.jpg';
-import fresh_burger from '@/assets/images/fresh-burger.jpg';
-import chicken_halapenyo_burger from '@/assets/images/tovuqli-halapenyo-burgeri.jpg';
+import chicken_burger from '@/assets/pictures/tovuq-burger.jpg';
+import chicken_bbq_burger from '@/assets/pictures/tovuq-BBQ-burger.jpg';
+import chicken_chizburger from '@/assets/pictures/tovuq-chizburger.jpg';
+import fresh_burger from '@/assets/pictures/fresh-burger.jpg';
+import chicken_halapenyo_burger from '@/assets/pictures/tovuqli-halapenyo-burgeri.jpg';
 
-import meat_burger from '@/assets/images/goshtli-burger.jpg';
-import bbq_burger from '@/assets/images/BBQ-burger.jpg';
-import chizburger from '@/assets/images/chizburger.jpg';
-import dabl_chizburger from '@/assets/images/dabl-chizburger.jpg';
-import halapenyo_burger from '@/assets/images/halapenyo-burgeri.jpg';
+import meat_burger from '@/assets/pictures/goshtli-burger.jpg';
+import bbq_burger from '@/assets/pictures/BBQ-burger.jpg';
+import chizburger from '@/assets/pictures/chizburger.jpg';
+import dabl_chizburger from '@/assets/pictures/dabl-chizburger.jpg';
+import halapenyo_burger from '@/assets/pictures/halapenyo-burgeri.jpg';
 
-import meat_harryster from '@/assets/images/goshtli-harryster.jpg';
-import harryster_bbq from '@/assets/images/harryster-BBQ.jpg';
-import harryster_halapenyo from '@/assets/images/harryster-halapenyo.jpg';
-import chiz_harryster from '@/assets/images/chiz-harryster.jpg';
-import chicken_harryster from '@/assets/images/tovuqli-harryster.jpg';
-import chicken_harryster_bbq from '@/assets/images/tovuq-harryster-BBQ.jpg';
-import chicken_harryster_halapenyo from '@/assets/images/tovuq-harryster-halapenyo.jpg';
-import chicken_chiz_harryster from '@/assets/images/tovuq-chiz-harryster.jpg';
+import meat_harryster from '@/assets/pictures/goshtli-harryster.jpg';
+import harryster_bbq from '@/assets/pictures/harryster-BBQ.jpg';
+import harryster_halapenyo from '@/assets/pictures/harryster-halapenyo.jpg';
+import chiz_harryster from '@/assets/pictures/chiz-harryster.jpg';
+import chicken_harryster from '@/assets/pictures/tovuqli-harryster.jpg';
+import chicken_harryster_bbq from '@/assets/pictures/tovuq-harryster-BBQ.jpg';
+import chicken_harryster_halapenyo from '@/assets/pictures/tovuq-harryster-halapenyo.jpg';
+import chicken_chiz_harryster from '@/assets/pictures/tovuq-chiz-harryster.jpg';
 
-import bbq_hot_dog from '@/assets/images/BBQ-hot-dog.jpg';
-import cheese_bbq_hot_dog from '@/assets/images/pishloqli-BBQ-hot-dog.jpg';
-import classic_hot_dog from '@/assets/images/klassik-hot-dog.jpg';
-import cheese_crispy_hot_dog from '@/assets/images/pishloqli-crispy-hot-dog.jpg';
-import cheese_classic_hot_dog from '@/assets/images/pishloqli-klassik-hot-dog.jpg';
-import longer from '@/assets/images/longer.jpg';
-import cheese_longer from '@/assets/images/pishloqli-longer.jpg';
-import crispy_hot_dog from '@/assets/images/crispy-hot-dog.jpg';
+import bbq_hot_dog from '@/assets/pictures/BBQ-hot-dog.jpg';
+import cheese_bbq_hot_dog from '@/assets/pictures/pishloqli-BBQ-hot-dog.jpg';
+import classic_hot_dog from '@/assets/pictures/klassik-hot-dog.jpg';
+import cheese_crispy_hot_dog from '@/assets/pictures/pishloqli-crispy-hot-dog.jpg';
+import cheese_classic_hot_dog from '@/assets/pictures/pishloqli-klassik-hot-dog.jpg';
+import longer from '@/assets/pictures/longer.jpg';
+import cheese_longer from '@/assets/pictures/pishloqli-longer.jpg';
+import crispy_hot_dog from '@/assets/pictures/crispy-hot-dog.jpg';
 
-import chicken_klab_sendvich from '@/assets/images/tovuq-klab-sendvich.jpg';
-import turkey_klab_sendvich from '@/assets/images/indeyka-klab-sendvich.jpg';
+import chicken_klab_sendvich from '@/assets/pictures/tovuq-klab-sendvich.jpg';
+import turkey_klab_sendvich from '@/assets/pictures/indeyka-klab-sendvich.jpg';
 
-import potato_fri_cheese from '@/assets/images/kartoshka-fri-pishloq-bilan.jpg';
-import sweet_potato from '@/assets/images/jaydari-kartoshka.jpg';
-import naggets from '@/assets/images/naggetslar.jpg';
-import potato_fri from '@/assets/images/kartoshka-fri.jpg';
-import potato_fri_cheese_halapenyo from '@/assets/images/kartoshka-fri-pishloq-va-halapenyo.jpg';
+import potato_fri_cheese from '@/assets/pictures/kartoshka-fri-pishloq-bilan.jpg';
+import sweet_potato from '@/assets/pictures/jaydari-kartoshka.jpg';
+import naggets from '@/assets/pictures/naggetslar.jpg';
+import potato_fri from '@/assets/pictures/kartoshka-fri.jpg';
+import potato_fri_cheese_halapenyo from '@/assets/pictures/kartoshka-fri-pishloq-va-halapenyo.jpg';
 
-import ketchup_sous from '@/assets/images/pomidor-ketchup.png';
-import bbq_sous from '@/assets/images/BBQ-sous.png';
-import cheese_sous from '@/assets/images/pishloqli-sous.png';
-import garlic_sous from '@/assets/images/sarimsoq-sous.png';
+import ketchup_sous from '@/assets/pictures/pomidor-ketchup.jpg';
+import bbq_sous from '@/assets/pictures/BBQ-sous.jpg';
+import cheese_sous from '@/assets/pictures/pishloqli-sous.jpg';
+import garlic_sous from '@/assets/pictures/sarimsoq-sous.jpg';
 
-import bon_aqua_half from '@/assets/images/bon-aqua-gazsiz-half.jpg';
-import sprite_half from '@/assets/images/sprite-half.jpg';
-import fuse_tea_half from '@/assets/images/fuse-tea-mango-romashka.jpg';
-import coca_cola_half from '@/assets/images/coca-cola-half.jpg';
-import fanta_half from '@/assets/images/fanta-half.jpg';
+import bon_aqua_half from '@/assets/pictures/bon-aqua-gazsiz-half.jpg';
+import sprite_half from '@/assets/pictures/sprite-half.jpg';
+import fuse_tea_half from '@/assets/pictures/fuse-tea-mango-romashka.jpg';
+import coca_cola_half from '@/assets/pictures/coca-cola-half.jpg';
+import fanta_half from '@/assets/pictures/fanta-half.jpg';
 
-import special_combo from '@/assets/images/special-combo.jpg';
-import hot_deal_combo from '@/assets/images/hot-deal-combo.jpg';
-import king_snack_combo from '@/assets/images/king-snack-combo.jpg';
-import lunch_deal_combo from '@/assets/images/lunch-deal-combo.jpg';
-import classic_combo from '@/assets/images/classic-сombo.jpg';
+import special_combo from '@/assets/pictures/special-combo.jpg';
+import hot_deal_combo from '@/assets/pictures/hot-deal-combo.jpg';
+import king_snack_combo from '@/assets/pictures/king-snack-combo.jpg';
+import lunch_deal_combo from '@/assets/pictures/lunch-deal-combo.jpg';
+import classic_combo from '@/assets/pictures/classic-сombo.jpg';
 
 import { IData } from "@/types";
 
