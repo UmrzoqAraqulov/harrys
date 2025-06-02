@@ -44,9 +44,9 @@ export const AboutPage: FC = () => {
             <Image
               src={home_icon}
               alt="instagram icon"
-              className="h-10 sm:h-9 w-max "
+              className="h-6 sm:h-9 w-max "
             />
-            <p>{t("main")}</p>
+            <p>{t("ourMenu")}</p>
           </Link>
         </MotionEl>
         <MotionEl
@@ -60,7 +60,7 @@ export const AboutPage: FC = () => {
             <Image
               src={location_icon}
               alt="instagram icon"
-              className="h-10 sm:h-9 w-max "
+              className="h-6 sm:h-9 w-max "
             />
             <p>{t("location")}</p>
           </Link>
@@ -76,7 +76,7 @@ export const AboutPage: FC = () => {
             <Image
               src={call_icon}
               alt="phone icon"
-              className="h-10 sm:h-9 w-max "
+              className="h-6 sm:h-9 w-max "
             />
             <p>{t("phone")}</p>
           </div>
@@ -93,7 +93,7 @@ export const AboutPage: FC = () => {
             <Image
               src={instagram_icon}
               alt="instagram icon"
-              className="h-10 sm:h-9 w-max "
+              className="h-6 sm:h-9 w-max "
             />
             <p>{t("instagram")}</p>
           </Link>
@@ -109,7 +109,7 @@ export const AboutPage: FC = () => {
             <Image
               src={telegram_icon}
               alt="telegram icon"
-              className="h-10 sm:h-9 w-max "
+              className="h-6 sm:h-9 w-max "
             />
             <p>{t("telegram")}</p>
           </Link>
@@ -128,22 +128,6 @@ export const AboutPage: FC = () => {
           <ModalHeader className="flex flex-col gap-1">{t("phone")}</ModalHeader>
           <ModalBody>
             <MotionEl
-              delay={.01}
-              className="w-full"
-            >
-              <Link
-                href="tel:+998772777702"
-                className="bg-primary flex justify-center items-center text-lg text-white gap-3 rounded-lg py-2"
-              >
-                <p>{t("callTo")}</p>
-                <Image
-                  src={call_icon}
-                  alt="instagram icon"
-                  className="h-8 sm:h-6 w-max "
-                />
-              </Link>
-            </MotionEl>
-            <MotionEl
               delay={.03}
               className="w-full"
             >
@@ -159,6 +143,23 @@ export const AboutPage: FC = () => {
                 />
               </Button>
             </MotionEl>
+            <MotionEl
+              delay={.01}
+              className="w-full"
+            >
+              <Link
+                href="tel:+998772777702"
+                className="bg-primary flex justify-center items-center text-lg text-white gap-3 rounded-lg py-2"
+              >
+                <p>{t("call")}</p>
+                <Image
+                  src={call_icon}
+                  alt="instagram icon"
+                  className="h-8 sm:h-6 w-max "
+                />
+              </Link>
+            </MotionEl>
+
           </ModalBody>
         </ModalContent>
       </Modal>

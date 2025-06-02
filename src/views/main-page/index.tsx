@@ -94,7 +94,7 @@ export const MainPage: FC = () => {
 
 
         {/* Kategoriya menyusi */}
-        <div className="p-2 pt-3 bg-white sticky top-[75px] z-10 shadow rounded-xl mt-5 flex items-center gap-2">
+        <div className="p-2 pt-3 bg-white sticky top-[62px] sm:top-[75px] z-10 shadow rounded-xl mt-5 flex items-center gap-2">
           <button
             className="bg-gray-200 px-3 py-2 rounded-full h-full min-h-[34px] min-w-[34px] "
             onClick={() => scrollByCategory('left')}
