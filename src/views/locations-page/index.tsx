@@ -4,7 +4,7 @@ import { MotionEl } from "@/components";
 import { location_icon } from "@/constants";
 import { locationData } from "@/constants/data";
 import { Link } from "@/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { FC } from "react";
@@ -14,11 +14,12 @@ const YandexMapView = dynamic(() => import("@/components/YandexMapView"), { ssr:
 const locations = [
   { name: "Cyber Arena", lat: 41.31347, lng: 69.29364 },
   { name: "Dream Park", lat: 41.28237, lng: 69.21562 },
-  { name: "Buxoro", lat: 41.35574, lng: 69.31144 },
+  { name: "THe Harry's", lat: 41.35574, lng: 69.31144 },
 ];
 
 export const LocationsPage: FC = () => {
   const t = useTranslations();
+  const locale = useLocale();
 
   const locationStyle = "bg-primary text-white p-2 md:p-4 rounded-lg shadow-md mb-4 border-2 border-red-200 flex cursor-pointer items-center gap-2 hover:bg-opacity-50 transition-colors duration-200";
 
@@ -53,7 +54,7 @@ export const LocationsPage: FC = () => {
           )}
         </div>
         <div className="w-full md:w-2/3 h-full">
-          <YandexMapView locations={locations} />
+          <YandexMapView locations={locations} locale={locale} />
         </div>
       </div>
     </section>

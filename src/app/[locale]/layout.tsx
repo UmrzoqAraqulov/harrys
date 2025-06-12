@@ -3,7 +3,7 @@ import { NextIntlClientProvider, useMessages, useTranslations } from "next-intl"
 import { Inter } from "next/font/google";
 
 import { BaseLayout, GoogleAnalytics } from "@/components";
-import { hero_bg_img, logo_img } from "@/constants";
+import { logo_img } from "@/constants";
 import { Providers } from "@/providers";
 import { TLocale } from "@/types";
 
@@ -23,10 +23,10 @@ export default function LocalLayout({ children, params: { locale } }: Readonly<P
   return (
     <html lang={locale}>
       <head>
-        <title>The Harry's COFFEE & SNACKS</title>
+        <title>The Harry's</title>
         <meta name="description" content={t("description")} />
         <meta name="keywords" content="Harry's Coffee, Snacks, Beverages, Menu" />
-        <meta property="og:title" content="The Harry's COFFEE & SNACKS" />
+        <meta property="og:title" content="The Harry's" />
         <meta property="og:description" content={t("description")} />
         <meta property="og:image" content={logo_img.src} />
         <meta property="og:image:type" content="image/jpeg" />
@@ -35,7 +35,7 @@ export default function LocalLayout({ children, params: { locale } }: Readonly<P
         <meta property="og:image:alt" content="harry's" />
         <meta property="og:url" content="https://the-harrys.uz" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="The Harry's COFFEE & SNACKS" />
+        <meta name="twitter:title" content="The Harry's" />
         <meta name="twitter:description" content={t("description")} />
         <meta name="twitter:image" content={logo_img.src} />
         <meta property="twitter:image:alt" content="harry's" />
@@ -51,10 +51,6 @@ export default function LocalLayout({ children, params: { locale } }: Readonly<P
         <link rel="apple-touch-icon" href={logo_img.src} type="image/png" sizes="any" />
         <link rel="icon" type="image/svg+xml" sizes="192x192" href={logo_img.src} />
         <link rel="icon" type="image/svg+xml" sizes="32x32" href={logo_img.src} />
-        <script
-          src={`https://api-maps.yandex.ru/2.1/?apikey=${process.env.NEXT_PUBLIC_YANDEX_API_KEY}&lang=uz_UZ`}
-          type="text/javascript"
-        />
       </head>
       <body
         className={inter.className}

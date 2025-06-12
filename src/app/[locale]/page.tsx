@@ -1,7 +1,6 @@
 import { logo_img } from "@/constants";
 import { IParams } from "@/types";
 import { HomePage } from "@/views";
-import { AboutPage } from "@/views/about-page";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
@@ -11,7 +10,7 @@ export async function generateMetadata(
   const t = await getTranslations();
 
   return {
-    title: "About Us - The Harry's Coffee & Snacks",
+    title: "About Us - The Harry's",
     description: t('description'),
     keywords: "Harry's Coffee, Snacks, Burgers, Side Dishes, Drinks, Hotdogs, Menu Categories",
     metadataBase: new URL(`https://the-harrys.uz/${params.locale}`),
@@ -27,30 +26,30 @@ export async function generateMetadata(
       },
     },
     openGraph: {
-      title: "Menu Categories | The Harry's COFFEE & SNACKS",
-      siteName: "The Harry's COFFEE & SNACKS",
-      description: "Discover the variety of categories available at The Harry's COFFEE & SNACKS, including burgers, side dishes, drinks, and hotdogs.",
+      title: "Menu Categories | The Harry's",
+      siteName: "The Harry's",
+      description: "Discover the variety of categories available at The Harry's, including burgers, side dishes, drinks, and hotdogs.",
       url: `https://the-harrys.uz/${params.locale}`,
       images: [
         {
           url: logo_img.src,
           width: 1200,
           height: 630,
-          alt: "The Harry's COFFEE & SNACKS",
+          alt: "The Harry's",
         },
       ],
       locale: params.locale,
     },
     twitter: {
       card: "summary_large_image",
-      title: "Menu Categories | The Harry's COFFEE & SNACKS",
-      description: "Discover the variety of categories available at The Harry's COFFEE & SNACKS, including burgers, side dishes, drinks, and hotdogs.",
+      title: "Menu Categories | The Harry's",
+      description: "Discover the variety of categories available at The Harry's, including burgers, side dishes, drinks, and hotdogs.",
       images: [
         {
           url: logo_img.src,
           width: 1200,
           height: 630,
-          alt: "The Harry's COFFEE & SNACKS",
+          alt: "The Harry's",
         },
       ],
     },

@@ -3,8 +3,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "The Harry's COFFEE & SNACKS",
-    short_name: "Harry's COFFEE & SNACKS",
+    name: "The Harry's",
+    short_name: "Harry's",
     start_url: '/',
     display: 'standalone',
     background_color: '#fff',

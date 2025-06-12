@@ -7,7 +7,7 @@ import Link from "next/link";
 import { motion } from 'framer-motion';
 
 import { MotionEl } from "@/components";
-import { logo_img, desk_logo_img, user_icon, bar_icon, close_icon } from "@/constants";
+import { desk_logo_img, bar_icon, close_icon } from "@/constants";
 import { IPageParams } from "@/types";
 import { LocaleSwitcher } from "../locale-switcher";
 
@@ -116,7 +116,7 @@ export const Header: FC<IPageParams> = () => {
           >
             <LocaleSwitcher />
           </MotionEl>
-          <MotionEl
+          {/* <MotionEl
             once
             direction="down"
             delay={.5}
@@ -131,7 +131,7 @@ export const Header: FC<IPageParams> = () => {
                 alt="user"
               />
             </div>
-          </MotionEl>
+          </MotionEl> */}
           <MotionEl
             once
             direction="down"
