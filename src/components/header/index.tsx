@@ -136,7 +136,7 @@ export const Header: FC<IPageParams> = () => {
             once
             direction="down"
             className="md:hidden block"
-            delay={.6}
+            delay={.1}
           >
             <div onClick={handleOpen} className="rounded-lg cursor-pointer bg-white border-1 py-1 px-2">
               <Image

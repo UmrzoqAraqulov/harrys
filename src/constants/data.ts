@@ -1,6 +1,7 @@
-import hero_first_img from '@/assets/pictures/hero-slider-1.jpg';
-import hero_second_img from '@/assets/pictures/hero-slider-2.jpg';
-import hero_third_img from '@/assets/pictures/hero-slider-3.jpg';
+import hero_first_img from '@/assets/pictures/banner-first.jpg';
+import hero_second_img from '@/assets/pictures/banner-second.jpg';
+import hero_third_img from '@/assets/pictures/banner-third.jpg';
+import hero_four_img from '@/assets/pictures/banner-four.jpg';
 
 import { ILocalesData, LocationType } from "@/types";
 
@@ -13,6 +14,7 @@ export const heroImgs = [
   hero_first_img,
   hero_second_img,
   hero_third_img,
+  hero_four_img,
 ]
 
 export const locationData: LocationType[] = [
