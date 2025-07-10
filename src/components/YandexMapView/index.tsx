@@ -1,6 +1,6 @@
 "use client";
 
-import { logo_img } from "@/constants";
+import { logo_icon } from "@/constants";
 import { useEffect, useRef } from "react";
 
 type Location = {
@@ -65,7 +65,7 @@ const YandexMapView = ({ locations, locale }: Props) => {
         { balloonContent: loc.name },
         {
           iconLayout: "default#image",
-          iconImageHref: logo_img.src,
+          iconImageHref: logo_icon.src,
           iconImageSize: [30, 30],
           iconImageOffset: [-15, -42],
         }

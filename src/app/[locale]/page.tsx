@@ -1,4 +1,4 @@
-import { logo_img } from "@/constants";
+import { logo_icon } from "@/constants";
 import { IParams } from "@/types";
 import { HomePage } from "@/views";
 import { Metadata } from "next";
@@ -32,7 +32,7 @@ export async function generateMetadata(
       url: `https://the-harrys.uz/${params.locale}`,
       images: [
         {
-          url: logo_img.src,
+          url: logo_icon.src,
           width: 1200,
           height: 630,
           alt: "The Harry's",
@@ -46,7 +46,7 @@ export async function generateMetadata(
       description: "Discover the variety of categories available at The Harry's, including burgers, side dishes, drinks, and hotdogs.",
       images: [
         {
-          url: logo_img.src,
+          url: logo_icon.src,
           width: 1200,
           height: 630,
           alt: "The Harry's",

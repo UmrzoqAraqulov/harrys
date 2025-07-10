@@ -15,10 +15,10 @@ import right_icon from '@/assets/icons/right.svg';
 import copy_icon from '@/assets/icons/copy.svg';
 import bar_icon from '@/assets/icons/bar.svg';
 import close_icon from '@/assets/icons/close.svg';
+import logo_icon from '@/assets/icons/logo.svg';
 
-import logo_img from '@/assets/pictures/logo.png';
 import desk_logo_img from '@/assets/pictures/logo-desktop.png';
-import hero_bg_img from '@/assets/pictures/hero-bg.jpg'
+import hero_bg_img from '@/assets/pictures/hero-bg.jpg';
 
 
 export {
@@ -41,7 +41,7 @@ export {
   close_icon,
 
   desk_logo_img,
-  logo_img,
+  logo_icon,
   hero_bg_img
 }
 
