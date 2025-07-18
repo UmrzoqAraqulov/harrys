@@ -53,6 +53,7 @@ import hot_deal_combo from '@/assets/pictures/hot-deal-combo.jpg';
 import king_snack_combo from '@/assets/pictures/king-snack-combo.jpg';
 import lunch_deal_combo from '@/assets/pictures/lunch-deal-combo.jpg';
 import classic_combo from '@/assets/pictures/classic-сombo.jpg';
+import test from '@/assets/pictures/test.png';
 
 import { IData } from "@/types";
 
@@ -124,7 +125,7 @@ export const menuData: IData[] = [
     title: "meat_burger",
     price: 40000,
     type: "meatBurger",
-    image: meat_burger,
+    image: test,
   },
   {
     title: "bbq_burger",
