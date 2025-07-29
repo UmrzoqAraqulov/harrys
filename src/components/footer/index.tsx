@@ -25,7 +25,7 @@ export const Footer: FC<IPageParams> = () => {
       }}
       initial="initial"
       animate={"initial"}
-      transition={{ duration: 0.7, ease: "easeInOut" }}
+      transition={{ duration: 1, ease: "easeInOut", delay: .6 }}
     >
       <div className="flex items-center justify-center w-full py-6">
         <hr className="flex-grow border-t border-gray-300" />
