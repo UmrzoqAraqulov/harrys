@@ -47,7 +47,7 @@ export const Footer: FC<IPageParams> = () => {
         </div>
         <hr className="flex-grow border-t border-gray-300" />
       </div>
-      <div className="py-10 bg-red-600 text-white">
+      <div className="py-10 bg-primary text-white">
         <div className="container flex gap-10 flex-wrap justify-between">
           <div className="flex flex-col gap-4">
             <MotionEl
@@ -189,7 +189,7 @@ export const Footer: FC<IPageParams> = () => {
           </div>
         </div>
       </div>
-      <p className="text-center px-4 py-2 text-red-600 text-sm">
+      <p className="text-center px-4 py-2 text-primary text-sm">
         {t("footer.info")}
       </p>
     </motion.footer>
