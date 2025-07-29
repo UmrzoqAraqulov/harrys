@@ -34,10 +34,10 @@ export const MainPage: FC = () => {
 
   return (
     <section className="container">
-      <div className="pt-[100px] pb-10 h-[500px]">
+      <div className="mt-[160px] pb-10 h-auto">
         <Swiper
           modules={[Pagination]}
-          className="w-full h-full rounded-3xl relative"
+          className="w-full h-full rounded-3xl relative shadow-lg"
           spaceBetween={30}
           loop
           pagination={{ clickable: true }}
@@ -48,7 +48,7 @@ export const MainPage: FC = () => {
               <Image
                 width={1500}
                 height={500}
-                className="w-full h-full object-cover rounded-3xl shadow-xl"
+                className="w-full h-full object-cover"
                 src={el.src}
                 alt="selected"
               />
@@ -58,7 +58,7 @@ export const MainPage: FC = () => {
       </div>
 
       <div className="flex justify-center">
-        <h1 className="font-bold text-xl md:text-2xl mt-20 mb-5 bg-red-500 text-white rounded-full py-1 px-8">{t(`menu.combo`)}</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-8 mb-5 bg-primary text-white rounded-full py-1.5 px-9">{t(`menu.combo`)}</h1>
       </div>
       {<div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 py-3 gap-3`}>
         {
@@ -77,7 +77,7 @@ export const MainPage: FC = () => {
       </div>}
 
       <div className="flex justify-center">
-        <h1 className="font-bold text-xl md:text-2xl mt-20 mb-5 bg-red-500 text-white rounded-full py-1 px-8">{t(`ourMenu`)}</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-10 mb-5 bg-primary text-white rounded-full py-1.5 px-9">{t(`ourMenu`)}</h1>
       </div>
       {<div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 py-3 gap-3`}>
         {
@@ -96,7 +96,7 @@ export const MainPage: FC = () => {
       </div>}
 
       <div className="flex justify-center">
-        <Link href="/menu" className="font-bold text-sm md:text-base my-7 bg-red-500 text-white rounded-full py-2 px-8">{t(`viewAllOffers`)}</Link>
+        <Link href="/menu" className="font-bold text-sm md:text-base my-7 bg-primary text-white rounded-full py-3 px-8">{t(`viewAllOffers`)}</Link>
       </div>
     </section>
   );

@@ -1,8 +1,7 @@
 import { TLocale } from "@/types";
 import { FC, ReactNode } from "react";
-import { Header } from "../";
-import { hero_bg_img } from "@/constants";
 import { Footer } from "../footer";
+import { Header } from "../header-new";
 
 interface IBaseLayout {
   children: ReactNode;

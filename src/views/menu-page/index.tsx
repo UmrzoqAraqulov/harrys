@@ -44,17 +44,17 @@ export const MenuPage: FC = () => {
   }, []);
 
   return (
-    <section className="container mt-24 pb-10">
-      <div className=" flex gap-5 ">
-        <div className="w-40 md:w-52 shrink-0">
-          <div className="flex flex-col gap-3 sticky top-24 px-1 pb-1">
+    <section className="container mt-34 pb-10">
+      <div className="flex gap-5 flex-col md:flex-row">
+        <div className="w-full md:w-52 shrink-0">
+          <div className="flex md:flex-col overflow-x-scroll gap-3 fixed bg-white w-full  md:sticky top-[100px] md:top-24 px-1 py-1 pt-14 left-0">
             {menuCategories.map((category) => (
               <Link
                 key={category}
                 href={`#${category}`}
                 onClick={() => setCheck(category)}
-                className={`whitespace-nowrap px-2 text-[15px] sm:text-base py-1 sm:px-4 sm:py-2 rounded-full bg-gray-100 hover:bg-red-200 transition 
-              ${category === check ? 'bg-red-500 text-white' : ''}`}
+                className={`whitespace-nowrap px-2 text-[15px] sm:text-base py-1 sm:px-4 sm:py-2 rounded-full bg-gray-100 hover:bg-opacity-70 transition 
+              ${category === check ? 'bg-primary text-white' : ''}`}
               >
                 {t(`menu.${category}`)}
               </Link>
@@ -64,7 +64,7 @@ export const MenuPage: FC = () => {
 
 
 
-        <div className="flex-1">
+        <div className="flex-1 pt-[140px]">
           {menuCategories.map((category) => (
             <div
               key={category}
@@ -72,7 +72,7 @@ export const MenuPage: FC = () => {
               ref={(el) => {
                 sectionRefs.current[category] = el;
               }}
-              className="scroll-mt-[90px]" // header offset uchun
+              className="scroll-mt-[130px] md:scroll-mt-[150px]" // header offset uchun
             >
               <h1 className="font-bold text-xl mt-3">
                 {t(`menu.${category}`)}
@@ -94,7 +94,7 @@ export const MenuPage: FC = () => {
             </div>
           ))}
 
-          <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5  py-3 gap-4`}>
+          <div className={`grid grid-cols-2 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 py-3 gap-4`}>
             {drinkData
               .map((el) => (
                 <CustomCard

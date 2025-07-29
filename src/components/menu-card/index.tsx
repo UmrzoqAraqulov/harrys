@@ -21,7 +21,7 @@ function MenuCard(props: Props) {
       <div className="p-3 flex flex-col gap-2">
         <h3 className="text-lg font-semibold">{t(`menu.${title}`)}</h3>
         {text && <div className="line-clamp-3 !text-sm">{parse(t.raw(`menu.${text}`))}</div>}
-        <p className="flex gap-1 border rounded-full py-1 bg-red-500 text-white text-base w-[180px] justify-center">
+        <p className="flex gap-1 border rounded-full py-1 bg-primary text-white text-base w-[180px] justify-center">
           <span className="font-bold">{formatNumberWithSpaces(price)}</span>
           <span>{t("sum")}</span>
         </p>

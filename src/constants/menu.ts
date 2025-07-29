@@ -48,10 +48,10 @@ import fuse_tea_half from '@/assets/pictures/fuse-tea-mango-romashka.jpg';
 import coca_cola_half from '@/assets/pictures/coca-cola-half.jpg';
 import fanta_half from '@/assets/pictures/fanta-half.jpg';
 
-import special_combo from '@/assets/pictures/special-combo.jpg';
-import king_snack_combo from '@/assets/pictures/king-snack-combo.jpg';
-import lunch_deal_combo from '@/assets/pictures/lunch-deal-combo.jpg';
-import classic_combo from '@/assets/pictures/classic-сombo.jpg';
+import special_combo from '@/assets/images/special-combo.png';
+import king_snack_combo from '@/assets/images/king-snack-combo.png';
+import lunch_deal_combo from '@/assets/images/lunch-deal-combo.png';
+import classic_combo from '@/assets/images/classic-combo.png';
 
 import { IData } from "@/types";
 
