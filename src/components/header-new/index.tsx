@@ -61,7 +61,7 @@ export const Header: FC<IPageParams> = () => {
         {/* logo */}
         <MotionEl
           once
-          delay={.1}
+          delay={.2}
           direction="down"
         >
           <Link href="/main">
@@ -84,7 +84,7 @@ export const Header: FC<IPageParams> = () => {
         <MotionEl
           once
           direction="down"
-          delay={.4}
+          delay={.3}
           className="hidden md:block"
         >
           <LocaleSwitcher className="!py-10" />
