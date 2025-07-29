@@ -47,7 +47,7 @@ export const MenuPage: FC = () => {
     <section className="container mt-34 pb-10">
       <div className="flex gap-5 flex-col md:flex-row">
         <div className="w-full md:w-52 shrink-0">
-          <div className="flex md:flex-col overflow-x-scroll gap-3 fixed bg-white w-full  md:sticky top-[100px] md:top-24 px-1 py-1 pt-14 left-0">
+          <div className="flex md:flex-col overflow-x-scroll gap-3 fixed bg-white w-full  md:sticky sm:top-[100px] top-[85px] md:top-24 px-1 py-1 pt-4 md:pt-10  left-0">
             {menuCategories.map((category) => (
               <Link
                 key={category}
@@ -72,7 +72,7 @@ export const MenuPage: FC = () => {
               ref={(el) => {
                 sectionRefs.current[category] = el;
               }}
-              className="scroll-mt-[130px] md:scroll-mt-[150px]" // header offset uchun
+              className="scroll-mt-[150px] sm:scroll-mt-[180px] md:scroll-mt-[150px]" // header offset uchun
             >
               <h1 className="font-bold text-xl mt-3">
                 {t(`menu.${category}`)}

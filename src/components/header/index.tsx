@@ -43,7 +43,6 @@ export const Header: FC<IPageParams> = () => {
     >
       <div className="w-full container flex justify-between items-center">
         <div className="items-center gap-12 flex">
-
           <MotionEl
             once
             delay={.1}
@@ -60,7 +59,6 @@ export const Header: FC<IPageParams> = () => {
           </MotionEl>
 
           <div className={navStyle}>
-
             <MotionEl
               once
               direction="down"

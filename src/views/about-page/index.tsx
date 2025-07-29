@@ -31,7 +31,7 @@ export const AboutPage: FC = () => {
   }
 
   return (
-    <section className="page flex sm:h-screen items-center justify-center">
+    <section className="page flex mt-5 sm:h-screen items-center justify-center">
       <div className="flex flex-col gap-3 sm:w-[500px]">
         <MotionEl
           delay={.1}
