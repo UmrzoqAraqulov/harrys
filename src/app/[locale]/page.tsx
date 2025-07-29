@@ -12,7 +12,6 @@ export async function generateMetadata(
   return {
     title: "About Us - The Harry's",
     description: t('description'),
-    keywords: "Harry's Coffee, Snacks, Burgers, Side Dishes, Drinks, Hotdogs, Menu Categories",
     metadataBase: new URL(`https://the-harrys.uz/${params.locale}`),
     robots: {
       follow: true,

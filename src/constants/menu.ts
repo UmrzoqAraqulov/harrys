@@ -4,38 +4,38 @@ import chicken_chizburger from '@/assets/pictures/tovuq-chizburger.jpg';
 import fresh_burger from '@/assets/pictures/fresh-burger.jpg';
 import chicken_halapenyo_burger from '@/assets/pictures/tovuqli-halapenyo-burgeri.jpg';
 
-import meat_burger from '@/assets/pictures/goshtli-burger.jpg';
-import bbq_burger from '@/assets/pictures/BBQ-burger.jpg';
-import chizburger from '@/assets/pictures/chizburger.jpg';
-import dabl_chizburger from '@/assets/pictures/dabl-chizburger.jpg';
-import halapenyo_burger from '@/assets/pictures/halapenyo-burgeri.jpg';
+import meat_burger from '@/assets/images/goshtli-burger.png';
+import bbq_burger from '@/assets/images/BBQ-burger.png';
+import chizburger from '@/assets/images/chizburger.png';
+import dabl_chizburger from '@/assets/images/dabl-chizburger.png';
+import halapenyo_burger from '@/assets/images/halapenyo-burger.png';
 
-import meat_harryster from '@/assets/pictures/goshtli-harryster.jpg';
-import harryster_bbq from '@/assets/pictures/harryster-BBQ.jpg';
-import harryster_halapenyo from '@/assets/pictures/harryster-halapenyo.jpg';
-import chiz_harryster from '@/assets/pictures/chiz-harryster.jpg';
+import meat_harryster from '@/assets/images/goshtli-harryster.png';
+import harryster_bbq from '@/assets/images/harryster-BBQ.png';
+import harryster_halapenyo from '@/assets/images/harryster-halapenyo.png';
+import chiz_harryster from '@/assets/images/chiz-harryster.png';
 import chicken_harryster from '@/assets/pictures/tovuqli-harryster.jpg';
 import chicken_harryster_bbq from '@/assets/pictures/tovuq-harryster-BBQ.jpg';
 import chicken_harryster_halapenyo from '@/assets/pictures/tovuq-harryster-halapenyo.jpg';
 import chicken_chiz_harryster from '@/assets/pictures/tovuq-chiz-harryster.jpg';
 
-import bbq_hot_dog from '@/assets/pictures/BBQ-hot-dog.jpg';
-import cheese_bbq_hot_dog from '@/assets/pictures/pishloqli-BBQ-hot-dog.jpg';
-import classic_hot_dog from '@/assets/pictures/klassik-hot-dog.jpg';
-import cheese_crispy_hot_dog from '@/assets/pictures/pishloqli-crispy-hot-dog.jpg';
-import cheese_classic_hot_dog from '@/assets/pictures/pishloqli-klassik-hot-dog.jpg';
-import longer from '@/assets/pictures/longer.jpg';
-import cheese_longer from '@/assets/pictures/pishloqli-longer.jpg';
-import crispy_hot_dog from '@/assets/pictures/crispy-hot-dog.jpg';
+import bbq_hot_dog from '@/assets/images/BBQ-hot-dog.png';
+import cheese_bbq_hot_dog from '@/assets/images/pishloqli-BBQ-hot-dog.png';
+import classic_hot_dog from '@/assets/images/klassik-hot-dog.png';
+import cheese_crispy_hot_dog from '@/assets/images/pishloqli-crispy-hot-dog.png';
+import cheese_classic_hot_dog from '@/assets/images/pishloqli-klassik-hot-dog.png';
+import longer from '@/assets/images/longer.png';
+import cheese_longer from '@/assets/images/pishloqli-longer.png';
+import crispy_hot_dog from '@/assets/images/crispy-hot-dog.png';
 
-import chicken_klab_sendvich from '@/assets/pictures/tovuq-klab-sendvich.jpg';
-import turkey_klab_sendvich from '@/assets/pictures/indeyka-klab-sendvich.jpg';
+import chicken_klab_sendvich from '@/assets/images/klab-sendvich-tovuq.png';
+import turkey_klab_sendvich from '@/assets/images/klab-sendvich-indeyka.png';
 
-import potato_fri_cheese from '@/assets/pictures/kartoshka-fri-pishloq-bilan.jpg';
-import sweet_potato from '@/assets/pictures/jaydari-kartoshka.jpg';
-import naggets from '@/assets/pictures/naggetslar.jpg';
-import potato_fri from '@/assets/pictures/kartoshka-fri.jpg';
-import potato_fri_cheese_halapenyo from '@/assets/pictures/kartoshka-fri-pishloq-va-halapenyo.jpg';
+import potato_fri_cheese from '@/assets/images/kartoshka-fri-pishloq.png';
+import sweet_potato from '@/assets/images/jaydari-kartoshka.png';
+import naggets from '@/assets/images/naggets.png';
+import potato_fri from '@/assets/images/kartoshka-fri.png';
+import potato_fri_cheese_halapenyo from '@/assets/images/kartoshka-fri-pishloq-halpeno.png';
 
 import ketchup_sous from '@/assets/pictures/pomidor-ketchup.jpg';
 import bbq_sous from '@/assets/pictures/BBQ-sous.jpg';
@@ -49,73 +49,74 @@ import coca_cola_half from '@/assets/pictures/coca-cola-half.jpg';
 import fanta_half from '@/assets/pictures/fanta-half.jpg';
 
 import special_combo from '@/assets/pictures/special-combo.jpg';
-import hot_deal_combo from '@/assets/pictures/hot-deal-combo.jpg';
 import king_snack_combo from '@/assets/pictures/king-snack-combo.jpg';
 import lunch_deal_combo from '@/assets/pictures/lunch-deal-combo.jpg';
 import classic_combo from '@/assets/pictures/classic-сombo.jpg';
-import test from '@/assets/pictures/test.png';
 
 import { IData } from "@/types";
 
-export const menuCategories = ["meatBurger", "chickenBurger", "combo", "meatHarryster", "chickenHarryster", "sendvich", "fri", "hotDog", "sous", "drink"];
+export const menuCategories = ["combo", "meatBurger", "chickenBurger", "meatHarryster", "chickenHarryster", "sendvich", "fri", "hotDog", "sous", "drink"];
 
 export const menuData: IData[] = [
   {
     title: "special_combo",
+    text: "special_combo-text",
     price: 25000,
     type: "combo",
     image: special_combo,
   },
   {
-    title: "hot_deal_combo",
-    price: 44000,
-    type: "combo",
-    image: hot_deal_combo,
-  },
-  {
     title: "king_snack_combo",
+    text: "king_snack_combo-text",
     price: 50000,
     type: "combo",
     image: king_snack_combo,
   },
   {
     title: "lunch_deal_combo",
+    text: "lunch_deal_combo-text",
     price: 52000,
     type: "combo",
     image: lunch_deal_combo,
   },
   {
     title: "classic_combo",
+    text: "classic_combo-text",
     price: 60000,
     type: "combo",
     image: classic_combo,
   },
   {
     title: "chicken_burger",
+    text: "chicken_burger-text",
     price: 32000,
     type: "chickenBurger",
     image: chicken_burger,
   },
   {
     title: "chicken_bbq",
+    text: "chicken_bbq-text",
     price: 32000,
     type: "chickenBurger",
     image: chicken_bbq_burger,
   },
   {
     title: "chicken_chizburger",
+    text: "chicken_chizburger-text",
     price: 35000,
     type: "chickenBurger",
     image: chicken_chizburger,
   },
   {
     title: "fresh_burger",
+    text: "fresh_burger-text",
     price: 35000,
     type: "chickenBurger",
     image: fresh_burger,
   },
   {
     title: "chicken_halapenyo_burger",
+    text: "chicken_halapenyo_burger-text",
     price: 32000,
     type: "chickenBurger",
     image: chicken_halapenyo_burger,
@@ -123,30 +124,35 @@ export const menuData: IData[] = [
 
   {
     title: "meat_burger",
+    text: "meat_burger-text",
     price: 40000,
     type: "meatBurger",
-    image: test,
+    image: meat_burger,
   },
   {
     title: "bbq_burger",
+    text: "bbq_burger-text",
     price: 40000,
     type: "meatBurger",
     image: bbq_burger,
   },
   {
     title: "chizburger",
+    text: "chizburger-text",
     price: 42000,
     type: "meatBurger",
     image: chizburger,
   },
   {
     title: "dabl_chizburger",
+    text: "dabl_chizburger-text",
     price: 55000,
     type: "meatBurger",
     image: dabl_chizburger,
   },
   {
     title: "halapenyo_burger",
+    text: "halapenyo_burger-text",
     price: 40000,
     type: "meatBurger",
     image: halapenyo_burger,
@@ -154,24 +160,28 @@ export const menuData: IData[] = [
 
   {
     title: "meat_harryster",
+    text: "meat_harryster-text",
     price: 30000,
     type: "meatHarryster",
     image: meat_harryster,
   },
   {
     title: "harryster_bbq",
+    text: "harryster_bbq-text",
     price: 30000,
     type: "meatHarryster",
     image: harryster_bbq,
   },
   {
     title: "harryster_halapenyo",
+    text: "harryster_halapenyo-text",
     price: 30000,
     type: "meatHarryster",
     image: harryster_halapenyo,
   },
   {
     title: "chiz_harryster",
+    text: "chiz_harryster-text",
     price: 32000,
     type: "meatHarryster",
     image: chiz_harryster,
@@ -179,24 +189,28 @@ export const menuData: IData[] = [
 
   {
     title: "chicken_harryster",
+    text: "chicken_harryster-text",
     price: 27000,
     type: "chickenHarryster",
     image: chicken_harryster,
   },
   {
     title: "chicken_harryster_bbq",
+    text: "chicken_harryster_bbq-text",
     price: 27000,
     type: "chickenHarryster",
     image: chicken_harryster_bbq,
   },
   {
     title: "chicken_harryster_halapenyo",
+    text: "chicken_harryster_halapenyo-text",
     price: 27000,
     type: "chickenHarryster",
     image: chicken_harryster_halapenyo,
   },
   {
     title: "chicken_chiz_harryster",
+    text: "chicken_chiz_harryster-text",
     price: 29000,
     type: "chickenHarryster",
     image: chicken_chiz_harryster,
@@ -204,12 +218,14 @@ export const menuData: IData[] = [
 
   {
     title: "chicken_klab_sendvich",
+    text: "chicken_klab_sendvich-text",
     price: 38000,
     type: "sendvich",
     image: chicken_klab_sendvich,
   },
   {
     title: "turkey_klab_sendvich",
+    text: "turkey_klab_sendvich-text",
     price: 38000,
     type: "sendvich",
     image: turkey_klab_sendvich,
@@ -217,30 +233,35 @@ export const menuData: IData[] = [
 
   {
     title: "potato_fri_cheese",
+    text: "potato_fri_cheese-text",
     price: 20000,
     type: "fri",
     image: potato_fri_cheese,
   },
   {
     title: "sweet_potato",
+    text: "sweet_potato-text",
     price: 16000,
     type: "fri",
     image: sweet_potato,
   },
   {
     title: "naggets",
+    text: "naggets-text",
     price: 15000,
     type: "fri",
     image: naggets,
   },
   {
     title: "potato_fri",
+    text: "potato_fri-text",
     price: 16000,
     type: "fri",
     image: potato_fri,
   },
   {
     title: "potato_fri_cheese_halapenyo",
+    text: "potato_fri_cheese_halapenyo-text",
     price: 22000,
     type: "fri",
     image: potato_fri_cheese_halapenyo,
@@ -248,48 +269,56 @@ export const menuData: IData[] = [
 
   {
     title: "bbq_hot_dog",
+    text: "bbq_hot_dog-text",
     price: 23000,
     type: "hotDog",
     image: bbq_hot_dog,
   },
   {
     title: "cheese_bbq_hot_dog",
+    text: "cheese_bbq_hot_dog-text",
     price: 25000,
     type: "hotDog",
     image: cheese_bbq_hot_dog,
   },
   {
     title: "classic_hot_dog",
+    text: "classic_hot_dog-text",
     price: 23000,
     type: "hotDog",
     image: classic_hot_dog,
   },
   {
     title: "cheese_crispy_hot_dog",
+    text: "cheese_crispy_hot_dog-text",
     price: 25000,
     type: "hotDog",
     image: cheese_crispy_hot_dog,
   },
   {
     title: "cheese_classic_hot_dog",
+    text: "cheese_classic_hot_dog-text",
     price: 25000,
     type: "hotDog",
     image: cheese_classic_hot_dog,
   },
   {
     title: "longer",
+    text: "longer-text",
     price: 23000,
     type: "hotDog",
     image: longer,
   },
   {
     title: "cheese_longer",
+    text: "cheese_longer-text",
     price: 25000,
     type: "hotDog",
     image: cheese_longer,
   },
   {
     title: "crispy_hot_dog",
+    text: "crispy_hot_dog-text",
     price: 23000,
     type: "hotDog",
     image: crispy_hot_dog,
@@ -297,29 +326,35 @@ export const menuData: IData[] = [
 
   {
     title: "ketchup_sous",
+    text: "ketchup_sous-text",
     price: 5000,
     type: "sous",
     image: ketchup_sous,
   },
   {
     title: "bbq_sous",
+    text: "bbq_sous-text",
     price: 5000,
     type: "sous",
     image: bbq_sous,
   },
   {
     title: "cheese_sous",
+    text: "cheese_sous-text",
     price: 5000,
     type: "sous",
     image: cheese_sous,
   },
   {
     title: "garlic_sous",
+    text: "garlic_sous-text",
     price: 5000,
     type: "sous",
     image: garlic_sous,
   },
+]
 
+export const drinkData: IData[] = [
   {
     title: "coca_cola_half",
     price: 10000,

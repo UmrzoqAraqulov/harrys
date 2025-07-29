@@ -1,4 +1,4 @@
-import hero_first_img from '@/assets/pictures/banner-first.jpg';
+import hero_first_img from '@/assets/images/banner-2.jpg';
 import hero_second_img from '@/assets/pictures/banner-second.jpg';
 import hero_third_img from '@/assets/pictures/banner-third.jpg';
 import hero_four_img from '@/assets/pictures/banner-four.jpg';

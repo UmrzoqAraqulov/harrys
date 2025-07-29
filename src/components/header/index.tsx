@@ -16,7 +16,7 @@ export const Header: FC<IPageParams> = () => {
   const [openBar, setOpenBar] = useState<boolean>(false)
 
   const navStyle = `${openBar ? "right-0" : "-right-full"} flex gap-3 fixed md:static w-2/3 md:w-auto h-screen md:h-auto flex-col md:flex-row bg-white md:bg-transparent top-0 z-50 p-5 pt-[6%] md:p-0 duration-500`
-  const navItemStyle = "block bg-primary py-2 px-4 rounded-md text-white hover:scale-105 hover:-translate-y-0.5 text-center md:py-1 text-base sm:text-lg md:text-base"
+  const navItemStyle = "block bg-primary py-2 px-4 rounded-full text-white hover:scale-105 hover:-translate-y-0.5 text-center md:py-1 text-base sm:text-lg md:text-base"
 
   const handleOpen = () => {
     setOpenBar(true)
@@ -81,11 +81,18 @@ export const Header: FC<IPageParams> = () => {
               delay={.3}
               direction="down"
             >
-              <Link className={navItemStyle} onClick={handleClose} href="/locations">{t("location")}</Link>
+              <Link className={navItemStyle} onClick={handleClose} href="/menu">{t("ourMenu")}</Link>
             </MotionEl>
             <MotionEl
               once
               delay={.4}
+              direction="down"
+            >
+              <Link className={navItemStyle} onClick={handleClose} href="/locations">{t("location")}</Link>
+            </MotionEl>
+            <MotionEl
+              once
+              delay={.5}
               direction="down"
             >
               <Link className={navItemStyle} onClick={handleClose} href="/about">{t("about")}</Link>

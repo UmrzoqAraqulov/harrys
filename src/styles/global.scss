@@ -43,14 +43,6 @@ section.page {
   padding-bottom: 3rem;
 }
 
-.hero {
-  height: auto;
-
-  @include mixin.media(1024px) {
-    height: calc(100vh - 350px);
-  }
-}
-
 .wave-loader {
   position: relative;
   background: #555;
@@ -95,32 +87,39 @@ section.page {
   background: #ff0000;
 }
 
-.custom-swiper-button {
-  background-color: white;
-  border-radius: 50px;
-  width: 35px !important;
-  height: 35px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
+/* Stil fayl: swiper-override.css */
 
-  @include mixin.media(768px) {
-    width: 50px !important;
-    height: 50px !important;
-  }
+.swiper-pagination {
+  padding-right: 40px !important;
+  padding-bottom: 10px !important;
+  display: flex !important;
+  justify-content: end !important;
+  align-items: center !important;
+  gap: 0px !important;
 }
 
-.custom-swiper-button::after {
-  font-size: 20px !important;
-  font-weight: bold;
-  color: red;
-
-  @include mixin.media(768px) {
-    font-size: 30px !important;
-  }
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 9999px !important;
+  background-color: rgb(204, 202, 202) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
 }
 
-.custom-swiper-button:hover {
-  background-color: rgb(231, 231, 231);
+.swiper-pagination-bullet-active {
+  width: 100px !important;
+  background-color: rgb(155, 155, 155) !important;
+}
+
+.custom-shadow {
+  box-shadow:
+    0 2px 12px rgba(83, 83, 83, 0.08), // pastga
+    0 -2px 12px rgba(0, 0, 0, 0.06); // yuqoriga
+
+  &:hover {
+    box-shadow:
+      0 4px 14px rgba(0, 0, 0, 0.12), // kuchliroq pastga
+      0 -4px 14px rgba(0, 0, 0, 0.08); // kuchliroq yuqoriga
+  }
 }

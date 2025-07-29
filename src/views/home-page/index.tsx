@@ -17,7 +17,7 @@ export const HomePage: FC = () => {
     if (isDesktop) {
       router.replace("/main"); // Desktop bo‘lsa
     } else {
-      router.replace("/about"); // Mobile/tablet bo‘lsa
+      router.replace("/menu"); // Mobile/tablet bo‘lsa
     }
   }, [isDesktop, router]);
   return undefined;

@@ -31,7 +31,7 @@ export const AboutPage: FC = () => {
   }
 
   return (
-    <section className="page flex h-screen items-center justify-center">
+    <section className="page flex sm:h-screen items-center justify-center">
       <div className="flex flex-col gap-3 sm:w-[500px]">
         <MotionEl
           delay={.1}
@@ -39,6 +39,22 @@ export const AboutPage: FC = () => {
         >
           <Link
             href="/main"
+            className={linkStyle}
+          >
+            <Image
+              src={home_icon}
+              alt="instagram icon"
+              className="h-6 sm:h-9 w-max "
+            />
+            <p>{t("main")}</p>
+          </Link>
+        </MotionEl>
+        <MotionEl
+          delay={.1}
+          className="w-full md:hidden"
+        >
+          <Link
+            href="/menu"
             className={linkStyle}
           >
             <Image
@@ -59,7 +75,7 @@ export const AboutPage: FC = () => {
           >
             <Image
               src={location_icon}
-              alt="instagram icon"
+              alt="location icon"
               className="h-6 sm:h-9 w-max "
             />
             <p>{t("location")}</p>
@@ -138,7 +154,7 @@ export const AboutPage: FC = () => {
                 <p>+998(77) 277 77 02</p>
                 <Image
                   src={copy_icon}
-                  alt="instagram icon"
+                  alt="copy icon"
                   className="h-8 sm:h-6 w-max "
                 />
               </Button>
@@ -154,7 +170,7 @@ export const AboutPage: FC = () => {
                 <p>{t("call")}</p>
                 <Image
                   src={call_icon}
-                  alt="instagram icon"
+                  alt="call icon"
                   className="h-8 sm:h-6 w-max "
                 />
               </Link>

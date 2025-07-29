@@ -2,6 +2,7 @@ import { TLocale } from "@/types";
 import { FC, ReactNode } from "react";
 import { Header } from "../";
 import { hero_bg_img } from "@/constants";
+import { Footer } from "../footer";
 
 interface IBaseLayout {
   children: ReactNode;
@@ -15,6 +16,7 @@ export const BaseLayout: FC<Readonly<IBaseLayout>> = ({ children, locale }) => {
       <main>
         {children}
       </main>
+      <Footer />
     </>
   )
 }

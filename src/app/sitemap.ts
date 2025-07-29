@@ -67,6 +67,18 @@ export default function sitemap(): Sitemap {
           ru: "https://the-harrys.uz/ru/about",
         },
       },
+    },
+    {
+      url: "https://the-harrys.uz/menu",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          uz: "https://the-harrys.uz/uz/menu",
+          ru: "https://the-harrys.uz/ru/menu",
+        },
+      },
     }
   ];
 }

@@ -11,6 +11,7 @@ export interface IData {
   price: number;
   type?: string;
   title: string;
+  text?: string;
   secondPrice?: number;
   secondTitle?: string;
   image: StaticImageData;

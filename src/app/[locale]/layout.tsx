@@ -40,12 +40,12 @@ export default function LocalLayout({ children, params: { locale } }: Readonly<P
         <meta name="twitter:image" content={logo_icon.src} />
         <meta property="twitter:image:alt" content="harry's" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="author" content="Ogabek Mustafoev" />
+        <meta name="author" content="Umrzoq Araqulov" />
         <meta name="application-name" content="the-harrys" />
         <meta name="robots" content="index, follow" />
         <meta name="robots" content="max-image-preview:large" />
-        <link rel="author" href="https://mustafoev-ogabek.vercel.app/" />
-        <link rel="profile" href="https://t.me/Ogabek_Mustafoev" />
+        {/* <link rel="author" href="https://mustafoev-ogabek.vercel.app/" /> */}
+        <link rel="profile" href="https://t.me/araqulovdeveloper" />
         <link rel="canonical" href="https://the-harrys.uz" />
         <link rel="shortlink" href="https://the-harrys.uz" />
         <link rel="apple-touch-icon" href={logo_icon.src} type="image/png" sizes="any" />
