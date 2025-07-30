@@ -1,47 +1,91 @@
 "use client"
 
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from 'next-intl';
-
 import { menuData, menuCategories } from '@/constants';
 import CustomCard from "@/components/custom-card";
-
-import Link from "next/link";
 import MenuCard from "@/components/menu-card";
 import { drinkData } from "@/constants/menu";
 
 export const MenuPage: FC = () => {
   const t = useTranslations();
   const [check, setCheck] = useState<string>("combo");
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  const buttonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  useEffect(() => {
+    if (buttonRefs.current[check]) {
+      buttonRefs.current[check]?.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest"
+      });
+    }
+  }, [check]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting && entry.intersectionRatio > 0.5)
+        if (isScrolling) return; // scroll paytida observer ishlamasin
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting && entry.intersectionRatio > 0.3)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible.length > 0) {
-          const id = visible[0].target.id;
+
+        if (visibleEntries.length > 0) {
+          const id = visibleEntries[0].target.id;
           setCheck(id);
         }
       },
       {
-        rootMargin: "-50% 0px -50% 0px", // faqat markazda turganlar hisobga olinadi
-        threshold: [0.5], // 50% dan ko‘prog‘i ko‘rinsa
+        threshold: 0.3,
+        rootMargin: "-30% 0px -30% 0px",
       }
     );
 
-    menuCategories.forEach((category) => {
-      const section = sectionRefs.current[category];
-      if (section) observer.observe(section);
-    });
+    const timeout = setTimeout(() => {
+      menuCategories.forEach((category) => {
+        const section = sectionRefs.current[category];
+        if (section) observer.observe(section);
+      });
+    }, 0);
 
     return () => {
+      clearTimeout(timeout);
       observer.disconnect();
     };
+  }, [menuCategories, isScrolling]);
+
+  const setRef = useCallback((el: HTMLDivElement | null, category: string) => {
+    if (el) {
+      sectionRefs.current[category] = el;
+    } else {
+      delete sectionRefs.current[category];
+    }
   }, []);
+
+  // OnClick function
+  const handleCategoryClick = (category: string) => {
+    const section = sectionRefs.current[category];
+    if (section) {
+      setIsScrolling(true);
+      const headerOffset = 150;
+      const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+      setCheck(category);
+
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 700);
+    }
+  };
 
   return (
     <section className="container mt-34 pb-10">
@@ -49,30 +93,26 @@ export const MenuPage: FC = () => {
         <div className="w-full md:w-52 shrink-0">
           <div className="flex md:flex-col overflow-x-scroll gap-3 fixed bg-white w-full  md:sticky sm:top-[100px] top-[85px] md:top-24 px-1 py-1 pt-4 md:pt-10  left-0">
             {menuCategories.map((category) => (
-              <Link
+              <button
                 key={category}
-                href={`#${category}`}
-                onClick={() => setCheck(category)}
+                ref={el => { buttonRefs.current[category] = el; }}
+                onClick={() => handleCategoryClick(category)}
                 className={`whitespace-nowrap px-2 text-[15px] sm:text-base py-1 sm:px-4 sm:py-2 rounded-full bg-gray-100 hover:bg-opacity-70 transition 
-              ${category === check ? 'bg-primary text-white' : ''}`}
+    ${category === check ? 'bg-primary text-white' : ''}`}
               >
                 {t(`menu.${category}`)}
-              </Link>
+              </button>
             ))}
           </div>
         </div>
 
-
-
-        <div className="flex-1 pt-[130px]">
+        <div className="flex-1 pt-[200px] md:pt-[130px]">
           {menuCategories.map((category) => (
             <div
               key={category}
               id={category}
-              ref={(el) => {
-                sectionRefs.current[category] = el;
-              }}
-              className="scroll-mt-[150px] sm:scroll-mt-[180px] md:scroll-mt-[140px]" // header offset uchun
+              ref={(el) => setRef(el, category)}
+              className="scroll-mt-[280px] sm:scroll-mt-[180px] md:scroll-mt-[140px]" // header offset uchun
             >
               <h1 className="font-bold text-xl mt-3">
                 {t(`menu.${category}`)}
@@ -109,6 +149,5 @@ export const MenuPage: FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
 };

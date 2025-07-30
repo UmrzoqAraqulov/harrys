@@ -1,3 +1,5 @@
+"use client";
+
 import { formatNumberWithSpaces } from "@/utils";
 import Image from "next/image"
 import parse from 'html-react-parser';
