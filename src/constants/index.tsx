@@ -9,11 +9,11 @@ import telegram_icon from '@/assets/icons/telegram_color.svg';
 import location_icon from '@/assets/icons/location.png';
 import sideDishes_icon from '@/assets/icons/side-dishes.svg';
 import user_icon from '@/assets/icons/user.svg';
-import languages_icon from '@/assets/icons/language.svg';
+import languages_icon from '@/assets/icons/lang-icon.svg';
 import left_icon from '@/assets/icons/left.svg';
 import right_icon from '@/assets/icons/right.svg';
 import copy_icon from '@/assets/icons/copy.svg';
-import bar_icon from '@/assets/icons/bar.svg';
+import bar_icon from '@/assets/icons/bar-icon.svg';
 import close_icon from '@/assets/icons/close.svg';
 import logo_icon from '@/assets/icons/logo.svg';
 

@@ -35,14 +35,15 @@ export const LocaleSwitcher: FC<ILocaleSwitcher> = ({ className }) => {
       }
       defaultSelectedKeys={[locale]}
       aria-label="language-select"
-      classNames={{ value: "text-white selected_value" }}
-      style={{ background: "#fff", color: "#000" }}
+      classNames={{ value: "!text-white" }}
+      style={{ background: "#ff0000", color: "#fff", border: "2px solid white" }}
     >
       {localesData.map((item) => (
         <SelectItem
           key={item.value}
           value={item.value}
           classNames={{ title: "font-semibold" }}
+          style={{ background: "#ff0000", color: "#fff" }}
           onClick={() => handleClick(item)}
         >
           {item.label}

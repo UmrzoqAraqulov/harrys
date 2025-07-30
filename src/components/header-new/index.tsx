@@ -47,9 +47,9 @@ export const Header: FC<IPageParams> = () => {
           direction="down"
           delay={.1}
         >
-          <div onClick={handleOpen} className="rounded-lg cursor-pointer bg-white border-1 py-1 px-3">
+          <div onClick={handleOpen} className="rounded-full cursor-pointer border-3 p-1">
             <Image
-              className="w-6 cursor-pointer"
+              className="w-8 cursor-pointer"
               width={16}
               height={16}
               color="white"
