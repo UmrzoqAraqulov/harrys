@@ -25,7 +25,7 @@ function CustomCard(props: Props) {
             {t(`menu.${text}`)}
           </div>
           <div
-            className="absolute left-1/2 z-10 border-1 border-primary -translate-x-1/2 mt-2 min-w-[180px] w-full bg-white text-gray-500 italic rounded-lg shadow-lg p-2 opacity-0 hidden group-hover:opacity-100 group-hover:block transition-opacity text-xs"
+            className="absolute left-1/2 z-10 border-1 border-primary -translate-x-1/2 mt-2 min-w-[180px] w-full bg-white text-gray-500 italic rounded-lg shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 transition-opacity text-xs"
           >
             {t(`menu.${text}`)}
           </div>
