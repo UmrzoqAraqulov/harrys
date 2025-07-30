@@ -113,6 +113,10 @@ section.page {
 .swiper-pagination-bullet-active {
   width: 100px !important;
   background-color: rgb(155, 155, 155) !important;
+
+  @media(max-width: 700px) {
+    width: 50px !important;
+  }
 }
 
 .custom-shadow {

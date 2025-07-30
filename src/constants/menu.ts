@@ -1,8 +1,8 @@
-import chicken_burger from '@/assets/pictures/tovuq-burger.jpg';
-import chicken_bbq_burger from '@/assets/pictures/tovuq-BBQ-burger.jpg';
-import chicken_chizburger from '@/assets/pictures/tovuq-chizburger.jpg';
-import fresh_burger from '@/assets/pictures/fresh-burger.jpg';
-import chicken_halapenyo_burger from '@/assets/pictures/tovuqli-halapenyo-burgeri.jpg';
+import chicken_burger from '@/assets/images/tovuq-burger.png';
+import chicken_bbq_burger from '@/assets/images/tovuq-burger-BBQ.png';
+import chicken_chizburger from '@/assets/images/tovuq-chizburger.png';
+import fresh_burger from '@/assets/images/fresh-burger.png';
+import chicken_halapenyo_burger from '@/assets/images/tovuq-burger-halapeno.png';
 
 import meat_burger from '@/assets/images/goshtli-burger.png';
 import bbq_burger from '@/assets/images/BBQ-burger.png';
@@ -14,10 +14,10 @@ import meat_harryster from '@/assets/images/goshtli-harryster.png';
 import harryster_bbq from '@/assets/images/harryster-BBQ.png';
 import harryster_halapenyo from '@/assets/images/harryster-halapenyo.png';
 import chiz_harryster from '@/assets/images/chiz-harryster.png';
-import chicken_harryster from '@/assets/pictures/tovuqli-harryster.jpg';
-import chicken_harryster_bbq from '@/assets/pictures/tovuq-harryster-BBQ.jpg';
-import chicken_harryster_halapenyo from '@/assets/pictures/tovuq-harryster-halapenyo.jpg';
-import chicken_chiz_harryster from '@/assets/pictures/tovuq-chiz-harryster.jpg';
+import chicken_harryster from '@/assets/images/tovuqli-harryster.png';
+import chicken_harryster_bbq from '@/assets/images/tovuqli-harryster-BBQ.png';
+import chicken_harryster_halapenyo from '@/assets/images/tovuqli-harryster-halapenyo.png';
+import chicken_chiz_harryster from '@/assets/images/tovuqli-chizharryster.png';
 
 import bbq_hot_dog from '@/assets/images/BBQ-hot-dog.png';
 import cheese_bbq_hot_dog from '@/assets/images/pishloqli-BBQ-hot-dog.png';

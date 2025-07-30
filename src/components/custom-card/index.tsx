@@ -19,10 +19,10 @@ function CustomCard(props: Props) {
     <div className={`bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col`}>
       <Image width={500} height={600} className="w-full rounded-2xl" src={img} alt={name} />
       <div className="p-3 flex flex-col gap-2 justify-between">
-        <h3 className="sm:text-xl text-lg text-center font-semibold">{t(`menu.${title}`)}</h3>
-        {text && <div className="line-clamp-3 text-[15px]">{parse(t.raw(`menu.${text}`))}</div>}
+        <h3 className="sm:text-xl md:text-lg text-center font-semibold">{t(`menu.${title}`)}</h3>
+        {text && <div className="line-clamp-3 text-sm md:text-[15px]">{parse(t.raw(`menu.${text}`))}</div>}
         <p className="flex gap-1 border rounded-full py-1 bg-primary text-white justify-center">
-          <span className="text-lg font-bold">{formatNumberWithSpaces(price)}</span>
+          <span className=" md:text-lg font-bold">{formatNumberWithSpaces(price)}</span>
           <span className="md:text-lg text-base">{t("sum")}</span>
         </p>
       </div>

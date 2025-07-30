@@ -64,7 +64,7 @@ export const MenuPage: FC = () => {
 
 
 
-        <div className="flex-1 pt-[140px]">
+        <div className="flex-1 pt-[130px]">
           {menuCategories.map((category) => (
             <div
               key={category}
@@ -72,7 +72,7 @@ export const MenuPage: FC = () => {
               ref={(el) => {
                 sectionRefs.current[category] = el;
               }}
-              className="scroll-mt-[150px] sm:scroll-mt-[180px] md:scroll-mt-[150px]" // header offset uchun
+              className="scroll-mt-[150px] sm:scroll-mt-[180px] md:scroll-mt-[140px]" // header offset uchun
             >
               <h1 className="font-bold text-xl mt-3">
                 {t(`menu.${category}`)}

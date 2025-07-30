@@ -34,7 +34,7 @@ export const MainPage: FC = () => {
 
   return (
     <section className="container">
-      <div className="mt-[160px] pb-10 h-auto">
+      <div className="mt-[110px] md:mt-[160px] md:pb-10 h-auto">
         <Swiper
           modules={[Pagination]}
           className="w-full h-full rounded-3xl relative shadow-lg"
@@ -58,7 +58,7 @@ export const MainPage: FC = () => {
       </div>
 
       <div className="flex justify-center">
-        <h1 className="font-bold text-xl md:text-2xl mt-8 mb-5 bg-primary text-white rounded-full py-1.5 px-9">{t(`menu.combo`)}</h1>
+        <h1 className="font-bold text-md md:text-2xl mt-5 md:mt-8 md:mb-5 bg-primary text-white rounded-full py-0.5 md:py-1.5 px-9">{t(`menu.combo`)}</h1>
       </div>
       {<div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 py-3 gap-3`}>
         {
@@ -77,7 +77,7 @@ export const MainPage: FC = () => {
       </div>}
 
       <div className="flex justify-center">
-        <h1 className="font-bold text-xl md:text-2xl mt-10 mb-5 bg-primary text-white rounded-full py-1.5 px-9">{t(`ourMenu`)}</h1>
+        <h1 className="font-bold text-md md:text-2xl mt-5 md:mt-8 md:mb-5 bg-primary text-white rounded-full py-0.5 md:py-1.5 px-9">{t(`ourMenu`)}</h1>
       </div>
       {<div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 py-3 gap-3`}>
         {
@@ -96,7 +96,7 @@ export const MainPage: FC = () => {
       </div>}
 
       <div className="flex justify-center">
-        <Link href="/menu" className="font-bold text-sm md:text-base my-7 bg-primary text-white rounded-full py-3 px-8">{t(`viewAllOffers`)}</Link>
+        <Link href="/menu" className="font-bold text-xs md:text-base mt-4 md:mt-7 md:mb-5 bg-primary text-white rounded-full py-2 md:py-3 px-8">{t(`viewAllOffers`)}</Link>
       </div>
     </section>
   );

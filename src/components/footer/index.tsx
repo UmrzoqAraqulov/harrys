@@ -4,6 +4,7 @@ import { FC } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import parse from 'html-react-parser';
 import { motion } from 'framer-motion';
 
 import { MotionEl } from "@/components";
@@ -34,7 +35,7 @@ export const Footer: FC<IPageParams> = () => {
             once
             delay={.1}
             direction="down"
-            className="w-[250px] sm:w-[350px]"
+            className="w-[200px] sm:w-[350px]"
           >
             <Link href="/main">
               <Image
@@ -48,13 +49,13 @@ export const Footer: FC<IPageParams> = () => {
         <hr className="flex-grow border-t border-gray-300" />
       </div>
       <div className="py-10 bg-primary text-white">
-        <div className="container flex gap-10 flex-wrap justify-between">
-          <div className="flex flex-col gap-4">
+        <div className="container flex gap-6 md:gap-10 flex-wrap justify-between">
+          <div className="flex flex-col gap-2 md:gap-4">
             <MotionEl
               once
               delay={.1}
               direction="down"
-              className="text-2xl"
+              className="text-xl md:text-2xl"
             >
               {t("footer.contactUs")}
             </MotionEl>
@@ -62,7 +63,7 @@ export const Footer: FC<IPageParams> = () => {
               once
               delay={.1}
               direction="down"
-              className="text-base"
+              className="text-sm md:text-base"
             >
               <Link
                 href="tel:+998772777702"
@@ -70,12 +71,12 @@ export const Footer: FC<IPageParams> = () => {
                 +998(77) 277 77 02
               </Link>
             </MotionEl>
-            <div className="flex gap-4">
+            <div className="flex gap-2 md:gap-4">
               <MotionEl
                 once
                 delay={.1}
                 direction="down"
-                className="text-base"
+                className="text-sm md:text-base"
               >
                 <Link href="">
                   <Image src={telegram_icon} alt="telegram" width={30} />
@@ -85,7 +86,7 @@ export const Footer: FC<IPageParams> = () => {
                 once
                 delay={.1}
                 direction="down"
-                className="text-base"
+                className="text-sm md:text-base"
               >
                 <Link
                   href="https://www.instagram.com/theharrys.uzb"
@@ -96,12 +97,12 @@ export const Footer: FC<IPageParams> = () => {
               </MotionEl>
             </div>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1 md:gap-3">
             <MotionEl
               once
               delay={.1}
               direction="down"
-              className="text-2xl"
+              className="text-xl md:text-2xl"
             >
               {t("about")}
             </MotionEl>
@@ -109,7 +110,7 @@ export const Footer: FC<IPageParams> = () => {
               once
               delay={.1}
               direction="down"
-              className="text-base"
+              className="text-sm md:text-base"
             >
               {t("footer.historyBrends")}
             </MotionEl>
@@ -117,7 +118,7 @@ export const Footer: FC<IPageParams> = () => {
               once
               delay={.1}
               direction="down"
-              className="text-base"
+              className="text-sm md:text-base"
             >
               <Link
                 href="/locations"
@@ -126,12 +127,12 @@ export const Footer: FC<IPageParams> = () => {
               </Link>
             </MotionEl>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1 md:gap-3">
             <MotionEl
               once
               delay={.1}
               direction="down"
-              className="text-2xl"
+              className="text-xl md:text-2xl"
             >
               {t("footer.help")}
             </MotionEl>
@@ -139,7 +140,7 @@ export const Footer: FC<IPageParams> = () => {
               once
               delay={.1}
               direction="down"
-              className="text-base"
+              className="text-sm md:text-base"
             >
               {t("footer.leaveRequest")}
             </MotionEl>
@@ -147,17 +148,17 @@ export const Footer: FC<IPageParams> = () => {
               once
               delay={.1}
               direction="down"
-              className="text-base"
+              className="text-sm md:text-base"
             >
               {t("footer.career")}
             </MotionEl>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1 md:gap-3">
             <MotionEl
               once
               delay={.1}
               direction="down"
-              className="text-2xl"
+              className="text-xl md:text-2xl"
             >
               {t("footer.account")}
             </MotionEl>
@@ -165,7 +166,7 @@ export const Footer: FC<IPageParams> = () => {
               once
               delay={.1}
               direction="down"
-              className="text-base"
+              className="text-sm md:text-base"
             >
               {t("footer.login")}
             </MotionEl>
@@ -173,7 +174,7 @@ export const Footer: FC<IPageParams> = () => {
               once
               delay={.1}
               direction="down"
-              className="text-base"
+              className="text-sm md:text-base"
             >
               {t("footer.register")}
             </MotionEl>
@@ -181,7 +182,7 @@ export const Footer: FC<IPageParams> = () => {
               once
               delay={.1}
               direction="down"
-              className="text-base"
+              className="text-sm md:text-base"
             >
               {t("footer.forgotYourPassword")}
             </MotionEl>
@@ -189,9 +190,9 @@ export const Footer: FC<IPageParams> = () => {
           </div>
         </div>
       </div>
-      <p className="text-center px-4 py-2 text-primary text-sm">
-        {t("footer.info")}
-      </p>
+      <div className="text-center px-4 py-2 text-primary text-sm">
+        {parse(t.raw("footer.info"))}
+      </div>
     </motion.footer>
   )
 }
