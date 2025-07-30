@@ -16,11 +16,20 @@ function CustomCard(props: Props) {
 
   const t = useTranslations();
   return (
-    <div className={`bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col`}>
+    <div className={`bg-white rounded-2xl shadow-lg flex flex-col`}>
       <Image width={500} height={600} className="w-full rounded-2xl" src={img} alt={name} />
       <div className="p-3 flex flex-col gap-2 justify-between">
         <h3 className="sm:text-xl md:text-lg text-center font-semibold">{t(`menu.${title}`)}</h3>
-        {text && <div className="line-clamp-3 text-sm md:text-[15px] text-gray-500">{parse(t.raw(`menu.${text}`))}</div>}
+        {text && <div className="relative group">
+          <div className="line-clamp-4 text-sm md:text-[15px] text-gray-500 italic cursor-pointer">
+            {t(`menu.${text}`)}
+          </div>
+          <div
+            className="absolute left-1/2 z-10 border-1 border-primary -translate-x-1/2 mt-2 min-w-[180px] w-full bg-white text-gray-500 italic rounded-lg shadow-lg p-2 opacity-0 hidden group-hover:opacity-100 group-hover:block transition-opacity text-xs"
+          >
+            {t(`menu.${text}`)}
+          </div>
+        </div>}
         <p className="flex gap-1 border rounded-full py-1 bg-primary text-white justify-center">
           <span className=" md:text-lg font-bold">{formatNumberWithSpaces(price)}</span>
           <span className="md:text-lg text-base">{t("sum")}</span>
