@@ -71,7 +71,7 @@ export const MenuPage: FC = () => {
     const section = sectionRefs.current[category];
     if (section) {
       setIsScrolling(true);
-      const headerOffset = 150;
+      const headerOffset = 140;
       const elementPosition = section.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
 
@@ -97,7 +97,7 @@ export const MenuPage: FC = () => {
                 key={category}
                 ref={el => { buttonRefs.current[category] = el; }}
                 onClick={() => handleCategoryClick(category)}
-                className={`whitespace-nowrap px-2 text-[15px] sm:text-base py-1 sm:px-4 sm:py-2 rounded-full bg-gray-100 hover:bg-opacity-70 transition 
+                className={`whitespace-nowrap px-2 text-[15px] sm:text-base py-1 sm:px-4 sm:py-2 rounded-full hover:bg-primary hover:text-white bg-gray-100 transition 
     ${category === check ? 'bg-primary text-white' : ''}`}
               >
                 {t(`menu.${category}`)}
@@ -106,13 +106,12 @@ export const MenuPage: FC = () => {
           </div>
         </div>
 
-        <div className="flex-1 pt-[200px] md:pt-[130px]">
+        <div className="flex-1 pt-[130px]">
           {menuCategories.map((category) => (
             <div
               key={category}
               id={category}
               ref={(el) => setRef(el, category)}
-              className="scroll-mt-[280px] sm:scroll-mt-[180px] md:scroll-mt-[140px]" // header offset uchun
             >
               <h1 className="font-bold text-xl mt-3">
                 {t(`menu.${category}`)}
